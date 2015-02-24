@@ -1,12 +1,14 @@
 /* jshint node:true */
-var gulp =       require('gulp'),
-    sass =       require('gulp-sass'),
-    jade =       require('gulp-jade'),
+var gulp         = require('gulp'),
+    sass         = require('gulp-sass'),
+    jade         = require('gulp-jade'),
     autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps = require('gulp-sourcemaps'),
-    minifyCss = require('gulp-minify-css'),
-    gutil = require('gulp-util'),
-    livereload = require('gulp-livereload');
+    sourcemaps   = require('gulp-sourcemaps'),
+    minifyCss    = require('gulp-minify-css'),
+    gutil        = require('gulp-util'),
+    livereload   = require('gulp-livereload'),
+    http         = require('http'),
+    st           = require('st');
 
 gulp.task('sass', function() {
     gulp.src('assets/scss/*.scss')
@@ -37,7 +39,15 @@ gulp.task('minify', function() {
         .pipe(gulp.dest('assets/css/min/'));
 });
 
-gulp.task('watch', function() {
+gulp.task('server', function(done) {
+    http.createServer(st({
+        path: __dirname + '/mockups',
+        index: 'index.html',
+        cache: false
+    })).listen(8000, done);
+});
+
+gulp.task('watch', ['server'], function() {
     livereload.listen();
     gulp.watch('assets/scss/*.scss', ['sass']);
     gulp.watch('mockups/src/*.jade', ['jade']);
