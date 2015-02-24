@@ -1,7 +1,13 @@
-@import utils
-@import vars
+@import "utils";
+@import "vars";
 
-@import base
-@import layout
-@import modules
-@import state
+@import "base";
+@import "layout";
+@import "modules";
+@import "state";
+
+/*!
+ * main.scss v1.0.0 (http://mmr2410.com)
+ * Copyright 2015 FRC Team 2410.
+ * Licensed under MIT
+ */

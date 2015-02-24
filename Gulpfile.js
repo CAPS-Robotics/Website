@@ -13,7 +13,7 @@ gulp.task('sass', function() {
         .pipe(sourcemaps.init())
         .pipe(sass().on('error', gutil.log))
         .pipe(autoprefixer())
-        .pipe(sourcemaps.wite())
+        .pipe(sourcemaps.write())
         .pipe(gulp.dest('assets/css/'))
         .pipe(livereload());
 });
@@ -39,6 +39,8 @@ gulp.task('minify', function() {
 
 gulp.task('watch', function() {
     livereload.listen();
-    gulp.watch('assets/scss/*.scss', ['scss']);
+    gulp.watch('assets/scss/*.scss', ['sass']);
     gulp.watch('mockups/src/*.jade', ['jade']);
 });
+
+gulp.task('default', ['jade', 'sass', 'watch']);
