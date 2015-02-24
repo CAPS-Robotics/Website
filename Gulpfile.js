@@ -21,9 +21,11 @@ gulp.task('sass', function() {
 });
 
 gulp.task('jade', function() {
-    var LOCALS = {};
+    var LOCALS = {
+        "css": "http://localhost:8000/assets/css/main.css"
+    };
 
-    gulp.src('mockups/src/*.jade')
+    gulp.src('mockups/src/**/*.jade')
         .pipe(jade({
             locals: LOCALS
         }))
@@ -41,7 +43,7 @@ gulp.task('minify', function() {
 
 gulp.task('server', function(done) {
     http.createServer(st({
-        path: __dirname + '/mockups',
+        path: __dirname + '/',
         index: 'index.html',
         cache: false
     })).listen(8000, done);
@@ -49,7 +51,7 @@ gulp.task('server', function(done) {
 
 gulp.task('watch', ['server'], function() {
     livereload.listen();
-    gulp.watch('assets/scss/*.scss', ['sass']);
+    gulp.watch('assets/scss/**/*.scss', ['sass']);
     gulp.watch('mockups/src/*.jade', ['jade']);
 });
 

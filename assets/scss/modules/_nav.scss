@@ -1,0 +1,42 @@
+.nav {
+    background: #008cba;
+    color: white;
+    display: flex;
+    flex-grow: 1;
+    justify-content: space-around;
+    height: 65px;
+    text-transform: capitalize;
+
+    &-secondary {
+
+    }
+
+    &--item {
+        display: inline-block;
+        margin: 24px;
+        height: 17px;
+        a {
+            color: white;
+        }
+    }
+
+    &--brand {
+        @extend .nav--item;
+    }
+
+    &--media {
+        @extend .nav--item;
+        margin: 24px 4px;
+    }
+
+    &--search {
+        color: #333;
+
+        [type="search"],
+        [type="text"] {
+            padding: 4px 6px;
+            height: auto;
+            margin: 19px;
+        }
+    }
+}
