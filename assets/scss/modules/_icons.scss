@@ -1,0 +1,21 @@
+@import "../vendor/fontawesome/variables";
+@import "../vendor/fontawesome/mixins";
+@import "../vendor/fontawesome/path";
+
+@mixin icon($icon) {
+    &:before {
+        content: $fa-var-#{$icon};
+    }
+}
+
+.icon {
+    @include fa-icon();
+
+    &--home { @include icon(home); }
+    &--team { @include icon(user); }
+    &--community { @include icon(users); }
+    &--robots { @include icon(cog); }
+    &--contact { @include icon(envelope); }
+    &--search { @include icon(search); }
+
+}
