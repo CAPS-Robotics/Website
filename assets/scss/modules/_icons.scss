@@ -4,18 +4,21 @@
 
 @mixin icon($icon) {
     &:before {
-        content: $fa-var-#{$icon};
+        content: $icon;
     }
 }
 
 .icon {
     @include fa-icon();
 
-    &--home { @include icon(home); }
-    &--team { @include icon(user); }
-    &--community { @include icon(users); }
-    &--robots { @include icon(cog); }
-    &--contact { @include icon(envelope); }
-    &--search { @include icon(search); }
+    &--home { @include icon($fa-var-home); }
+    &--team { @include icon($fa-var-users); }
+    &--community { @include icon($fa-var-child); }
+    &--robots { @include icon($fa-var-cogs); }
+    &--contact { @include icon($fa-var-envelope); }
+    &--search { @include icon($fa-var-search); }
+
+    &--twitter { @include icon($fa-var-twitter); }
+    &--facebook { @include icon($fa-var-facebook); }
 
 }
