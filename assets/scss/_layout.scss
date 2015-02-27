@@ -1,0 +1,23 @@
+.container {
+	@include container-fixed();
+
+	@media (min-width: 768px) {
+		width: (720px + 30px);
+	}
+
+	@media (min-width: 992px) {
+		width: (940px + 30px);
+	}
+
+	@media (min-width: 1200px) {
+		width: (1140 + 30px);
+	}
+}
+
+.center { text-align: center; }
+
+.justify { text-align: justify; }
+
+.right { text-align: right; }
+
+.left { text-align: left; }

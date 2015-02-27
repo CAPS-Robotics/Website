@@ -6,7 +6,7 @@
     color: white;
     display: flex;
     flex-grow: 1;
-    justify-content: space-around;
+    justify-content: center;
     height: 65px;
     text-transform: capitalize;
     font-size: 13px;
@@ -15,7 +15,7 @@
         display: flex;
         flex-grow: 1;
         justify-content: space-around;
-        height: 65px;
+        height: 100px;
         text-transform: capitalize;
 
         .nav--item {
@@ -24,22 +24,23 @@
             }
 
             a {
+                padding: 40px;
                 color: #008cba;
             }
         }
     }
 
     &--item {
-        display: inline-block;
-        padding: 24px;
-        height: 17px;
-
         &:hover {
             background: #006687;
         }
 
         a {
+            display: inline-block;
+            padding: 24px;
+            height: 17px auto;
             color: white;
+
             &:hover {
                 text-decoration: none;
             }
@@ -49,9 +50,15 @@
     &--brand {
         @extend .nav--item;
         text-transform: uppercase;
+        align-self: flex-start;
+
+        &:hover {
+            background: none;
+        }
     }
 
     &--media {
+        align-self: flex-end;
         display: inline-block;
         color: white;
     }
