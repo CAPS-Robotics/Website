@@ -22,7 +22,8 @@ gulp.task('sass', function() {
 
 gulp.task('jade', function() {
     var LOCALS = {
-        "css": "http://localhost:8000/assets/css/main.css"
+        "css": "http://localhost:8000/assets/css/main.css",
+        "first": "http://localhost:8000/assets/img/first-vertical.png"
     };
 
     gulp.src('mockups/src/**/*.jade')

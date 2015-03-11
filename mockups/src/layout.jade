@@ -19,26 +19,28 @@ html
                     a(href="home")
                         span.icon--horse
                         span the metal mustangs
-                li.nav--item
-                    a(href="home")
-                        span.icon.icon--home
-                        |  home
-                li.nav--item
-                    a(href="team")
-                        span.icon.icon--team
-                        |  team
-                li.nav--item
-                    a(href="community")
-                        span.icon.icon--community
-                        |  community
-                li.nav--item
-                    a(href="robots")
-                        span.icon.icon--robots
-                        |  robots
-                li.nav--item
-                    a(href="contact")
-                        span.icon.icon--contact
-                        |  contact
+                li.nav--items
+                    ul
+                        li.nav--item.nav--item-active
+                            a(href="home")
+                                span.icon.icon--home
+                                |  home
+                        li.nav--item
+                            a(href="team")
+                                span.icon.icon--team
+                                |  team
+                        li.nav--item
+                            a(href="community")
+                                span.icon.icon--community
+                                |  community
+                        li.nav--item
+                            a(href="robots")
+                                span.icon.icon--robots
+                                |  robots
+                        li.nav--item
+                            a(href="contact")
+                                span.icon.icon--contact
+                                |  contact
                 li.nav--media
                     .nav--search
                         span.icon.icon--search
@@ -67,4 +69,5 @@ html
         main#main
             block content
         footer#footer
-            p © 2015 FRC Team 2410
+            div.container
+                p © 2015 FRC Team 2410

@@ -21,3 +21,60 @@
 .right { text-align: right; }
 
 .left { text-align: left; }
+
+.space-around {
+	margin: 15px;
+}
+
+.grid {
+	display: flex;
+	flex-direction: row;
+	margin: 0 -15px;
+	&--column {
+		&--half {
+			box-sizing: padding-box;
+			width: 50%;
+			padding: 15px;
+		}
+		&--thrid {
+			box-sizing: padding-box;
+			width: 33.33%;
+			padding: 15px;
+		}
+		&--forth {
+			box-sizing: padding-box;
+			width: 25%;
+			padding: 15px;
+		}
+	}
+}
+
+.width {
+	&--half {
+		width: 50%;
+	}
+	&--thrid {
+		width: 33.33%;
+	}
+	&--forth {
+		width: 25%;
+	}
+	&--fifth {
+		width: 20%;
+	}
+}
+
+.height {
+	&--half {
+		height: 50%;
+	}
+	&--thrid {
+		height: 33.33%;
+	}
+	&--forth {
+		height: 25%;
+	}
+	&--fifth {
+		height: 20%;
+	}
+}

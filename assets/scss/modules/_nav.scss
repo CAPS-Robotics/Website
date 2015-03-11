@@ -6,7 +6,7 @@
     color: white;
     display: flex;
     flex-grow: 1;
-    justify-content: center;
+    justify-content: space-between;
     height: 65px;
     text-transform: capitalize;
     font-size: 13px;
@@ -31,7 +31,17 @@
     }
 
     &--item {
+        &s {
+            flex-grow: 3;
+            ul {
+
+            }
+        }
         &:hover {
+            background: #006687;
+        }
+
+        &-active {
             background: #006687;
         }
 
@@ -51,6 +61,7 @@
         @extend .nav--item;
         text-transform: uppercase;
         align-self: flex-start;
+        flex-grow: 1;
 
         &:hover {
             background: none;
@@ -61,6 +72,7 @@
         align-self: flex-end;
         display: inline-block;
         color: white;
+        flex-grow: 1;
     }
 
     &--icon {
