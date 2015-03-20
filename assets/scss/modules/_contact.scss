@@ -1,0 +1,21 @@
+.contact {
+    width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+
+    &--img {
+        box-sizing: content-box;
+        padding: 20px;
+        margin: -20px;
+        margin-top: -20px;
+        background: #008cba;
+    }
+
+    &--address {
+        box-sizing: content-box;
+        max-width: 100%;
+        padding: 20px;
+        margin: 20px -20px;
+        font-style: normal;
+    }
+}

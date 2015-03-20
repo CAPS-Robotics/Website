@@ -16,6 +16,8 @@
     &--community { @include icon($fa-var-child); }
     &--robots { @include icon($fa-var-cogs); }
     &--contact { @include icon($fa-var-envelope); }
+    &--blog { @include icon($fa-var-quote-left); }
+
     &--search { @include icon($fa-var-search); }
 
     &--twitter { @include icon($fa-var-twitter); }

@@ -6,7 +6,7 @@
     color: white;
     display: flex;
     flex-grow: 1;
-    justify-content: space-around;
+    justify-content: center;
     height: 65px;
     text-transform: capitalize;
     font-size: 13px;
@@ -21,6 +21,7 @@
         .nav--item {
             &:hover {
                 background: transparent;
+                background: rgba(#008cba,0.05);
             }
 
             a {
@@ -31,6 +32,9 @@
     }
 
     &--item {
+        width: 12.5%;
+        text-align: center;
+
         &:hover {
             background: #006687;
         }
@@ -42,8 +46,9 @@
         a {
             display: inline-block;
             padding: 24px;
-            height: 17px auto;
+            height: 17px;
             color: white;
+            margin: 0 auto;
 
             &:hover {
                 text-decoration: none;
@@ -62,6 +67,8 @@
     }
 
     &--media {
+        width: 12.5%;
+        text-align: center;
         align-self: flex-end;
         display: inline-block;
         color: white;
@@ -71,29 +78,5 @@
         display: inline-block;
         margin: 24px 6px;
         color: white;
-    }
-
-    &--search {
-        display: inline-block;
-        color: white;
-        margin: 19px;
-
-        .icon {
-            display: inline-block;
-            margin-right: -28px;
-            background: white;
-            color: #008cba;
-            padding: 5px 7px;
-            pointer-events: none;
-        }
-
-        [type="search"],
-        [type="text"] {
-            padding: 4px 6px 4px 30px;
-            height: auto;
-            color: #333;
-            border: none;
-            outline: none;
-        }
     }
 }
