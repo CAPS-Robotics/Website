@@ -14,57 +14,8 @@ html
         link(href=css, rel="stylesheet")
     body
         header#header
-            ul.nav
-                li.nav--brand
-                    a(href="home")
-                        span.icon--horse
-                        span the metal mustangs
-                li.nav--item.nav--item-active
-                    a(href="index.html")
-                        span.icon.icon--home
-                        |  home
-                li.nav--item
-                    a(href="team.html")
-                        span.icon.icon--team
-                        |  team
-                li.nav--item
-                    a(href="community.html")
-                        span.icon.icon--community
-                        |  community
-                li.nav--item
-                    a(href="robots.html")
-                        span.icon.icon--robots
-                        |  robots
-                li.nav--item
-                    a(href="blog.html")
-                        span.icon.icon--blog
-                        |  blog
-                li.nav--item
-                    a(href="contact.html")
-                        span.icon.icon--contact
-                        |  contact
-                li.nav--media
-                    a(href="https://twitter.com/team2410", target="_blank").nav--icon
-                        span.icon.icon--twitter
-                    a(href="https://facebook.com/FRC2410", target="_blank").nav--icon
-                        span.icon.icon--facebook
-            ul.nav-secondary
-                li.nav--item 
-                    a(href="http://www.bvcaps.org") Blue Valley CAPS
-                li.nav--item
-                    a(href="http://www.bvef.org") BVEF
-                li.nav--item
-                    a(href="http://www.sprint.com") Sprint
-                li.nav--item
-                    a(href="http://www.gm.com") General Motors
-                li.nav--item 
-                    a(href="http://www.honeywell.com") Honeywell
-                li.nav--item 
-                    a(href="http://www.cener.com") Cerner
-                li.nav--item 
-                    a(href="http://www.ryerson.com") Ryerson
-                li.nav--item 
-                    a(href="http://www.nasa.gov") NASA
+            include ./includes/navigation.jade
+            include ./includes/sponsors.jade
         main#main
             block content
         footer#footer

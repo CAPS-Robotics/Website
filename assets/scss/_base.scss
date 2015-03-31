@@ -9,6 +9,10 @@ body {
     height: 100vh;
 }
 
+#main {
+    padding-bottom: 65px;
+}
+
 ul {
     list-style-type: none;
     margin: 0;
@@ -20,7 +24,7 @@ a {
     color: #008cba;
 
     &:hover {
-        text-decoration: underline;
+        text-decoration: none;
     }
 }
 
