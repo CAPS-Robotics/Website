@@ -1,12 +1,13 @@
 /* jshint node:true */
-var gulp         = require('gulp'),
-    sass         = require('gulp-sass'),
-    jade         = require('gulp-jade'),
-    autoprefixer = require('gulp-autoprefixer'),
-    sourcemaps   = require('gulp-sourcemaps'),
-    minifyCss    = require('gulp-minify-css'),
-    gutil        = require('gulp-util'),
-    connect      = require('gulp-connect');
+var gulp         = require('gulp');
+var sass         = require('gulp-sass');
+var jade         = require('gulp-jade');
+var autoprefixer = require('gulp-autoprefixer');
+var sourcemaps   = require('gulp-sourcemaps');
+var minifyCss    = require('gulp-minify-css');
+var gutil        = require('gulp-util');
+var connect      = require('gulp-connect');
+var open         = require('gulp-open');
 
 gulp.task('sass', function() {
     gulp.src('assets/scss/*.scss')
@@ -54,4 +55,9 @@ gulp.task('watch', ['server'], function() {
     gulp.watch('mockups/src/*.jade', ['jade']);
 });
 
-gulp.task('default', ['jade', 'sass', 'watch']);
+gulp.task('open', function() {
+    gulp.src('./mockups/index.html')
+        .pipe(open('', {url: 'http://localhost:8000/mockups'}));
+});
+
+gulp.task('default', ['jade', 'sass', 'watch', 'open']);

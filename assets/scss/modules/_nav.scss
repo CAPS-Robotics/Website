@@ -20,8 +20,11 @@
 
         .nav--item {
             &:hover {
-                background: transparent;
-                background: rgba(#008cba,0.05);
+                background: white;
+
+                a {
+                    animation: shink-grow 1s ease-in-out forwards;
+                }
             }
 
             a {
@@ -44,7 +47,7 @@
         }
 
         a {
-            display: inline-block;
+            display: block;
             padding: 24px;
             height: 17px;
             color: white;
@@ -78,5 +81,23 @@
         display: inline-block;
         margin: 24px 6px;
         color: white;
+    }
+}
+
+@keyframes shink-grow {
+    0% {
+        transform: scale(1.0);
+    }
+    
+    25% {
+        transform: scale(0.9);
+    }
+
+    75% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1.0);
     }
 }

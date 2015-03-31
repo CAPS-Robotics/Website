@@ -10,10 +10,11 @@
 	white-space: nowrap;
 	padding: 6px 12px;
 
-	&--outline {
+	&-outline {
 		@extend .btn;
 		border-color: white;
 		color: white;
+		transition: background-color 0.5s;
 
 		&:hover {
 			background-color: white;
