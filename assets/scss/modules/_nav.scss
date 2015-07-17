@@ -1,116 +1,12 @@
-/* .nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #008cba;
-    color: white;
-    display: flex;
-    flex-grow: 1;
-    justify-content: center;
-    height: 65px;
-    text-transform: capitalize;
-    font-size: 13px;
-
-    &-secondary {
-        display: flex;
-        flex-grow: 1;
-        justify-content: space-around;
-        height: 100px;
-        text-transform: capitalize;
-
-        .nav--item {
-            &:hover {
-                background: white;
-
-                a {
-                    animation: shink-grow 1s ease-in-out forwards;
-                }
-            }
-
-            a {
-                padding: 40px;
-                color: #008cba;
-            }
-        }
-    }
-
-    &--item {
-        width: 12.5%;
-        text-align: center;
-
-        &:hover {
-            background: #006687;
-        }
-
-        &-active {
-            background: #006687;
-        }
-
-        a {
-            display: block;
-            padding: 24px;
-            height: 17px;
-            color: white;
-            margin: 0 auto;
-
-            &:hover {
-                text-decoration: none;
-            }
-        }
-    }
-
-    &--brand {
-        @extend .nav--item;
-        text-transform: uppercase;
-        align-self: flex-start;
-
-        &:hover {
-            background: none;
-        }
-    }
-
-    &--media {
-        width: 12.5%;
-        text-align: center;
-        align-self: flex-end;
-        display: inline-block;
-        color: white;
-    }
-
-    &--icon {
-        display: inline-block;
-        margin: 24px 6px;
-        color: white;
-    }
-}
-
-@keyframes shink-grow {
-    0% {
-        transform: scale(1.0);
-    }
-    
-    25% {
-        transform: scale(0.9);
-    }
-
-    75% {
-        transform: scale(1.05);
-    }
-
-    100% {
-        transform: scale(1.0);
-    }
-} */
-
 .nav {
     background-color: #008cba;
     top: 0;
     position: fixed;
     right: 0;
     left: 0;
-    min-height: 65px;
+    max-height: 65px;
 
-    &-header {
+    &-starter {
         float: left;
     }
 
@@ -124,9 +20,9 @@
         text-transform: capitalize;
     }
 
-    &-body {
-        display: block;
+    &-links {
         height: auto;
+        min-height: 65px;
         max-height: 340px;
     }
 
@@ -135,18 +31,23 @@
         display: block;
 
         li {
-            float: left;
             display: inline-block;
             position: relative;
+            min-height: 65px;
 
             a {
+                display: block;
                 color: white;
                 padding: 22.5px;
             }
         }
-    }
 
-    &-footer {
-        float: right;
+        li:hover {
+            background-color: white;
+            
+            a {
+                color: #008cba;
+            }
+        }
     }
 }

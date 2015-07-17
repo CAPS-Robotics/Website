@@ -1,4 +1,3 @@
-/* jshint node:true */
 var gulp         = require('gulp');
 var sass         = require('gulp-sass');
 var jade         = require('gulp-jade');
