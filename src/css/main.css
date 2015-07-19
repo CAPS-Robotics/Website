@@ -57,6 +57,20 @@ address {
     display: none;
 }
 
+/* Recycle Rush */
+.recycle { color: #A0D468; }
+.rush { color: #5D9CEC; }
+/* Aerial Assist */
+.aerial { color: #D8334A; }
+.assist { color: #5D9CEC; }
+/* Ultimate Ascent */
+.ultimate { color: #5D9CEC; }
+.ascent { color: #D8334A; }
+/* Rebound Rumble */
+.rebound { color: #5D9CEC; }
+.rumble { color: #FC6E51; }
+
+
 /* Larger than a phone */
 @media (min-width: 550px) {
     section {
