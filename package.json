@@ -11,7 +11,10 @@
     "url": "git+https://github.com/caps-robotics/Website.git"
   },
   "author": "Dominic Tassio <dominic.tassio@gmail.com>",
-  "license": "MIT",
+  "license": {
+    "type": "MIT",
+    "url": "https://github.com/caps-robotics/Website/blob/master/LICENSE.txt"
+  },
   "bugs": {
     "url": "https://github.com/caps-robotics/Website/issues"
   },
@@ -35,7 +38,7 @@
     "normalize.css": "^3.0.3",
     "run-sequence": "^1.1.1"
   },
-  "config": {
+  "configs": {
     "directories": {
       "archive": "archive",
       "dist": "dist",
