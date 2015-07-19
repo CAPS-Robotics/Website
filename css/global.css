@@ -2,6 +2,15 @@ a {
     text-decoration: none;
 }
 
+h5 {
+    color: #888;
+    font-weight: 500;
+}
+
+hr {
+    width: 80%;
+}
+
 section {
     padding-top: 2rem;
     padding-bottom: 2rem;
@@ -29,7 +38,13 @@ address {
     text-align: center;
 }
 
-.nav {
+.date {
+    color: #3C3B3D;
+    font-weight: bold;
+}
+
+.nav,
+.nav-spacer {
     display: none;
 }
 
@@ -88,13 +103,13 @@ address {
     .nav-item > a:hover {
         color: #33C3F0;
     }
-    .hav-nav-docked {
-        margin-top: 6rem;
-    }
     .has-nav-docked .nav {
         position: fixed;
         top: 0;
         left: 0;
         border-bottom: 1px solid #ddd;
+    }
+    .has-nav-docked .nav-spacer {
+        height: 6rem;
     }
 }
