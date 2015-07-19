@@ -1,10 +1,8 @@
-"use strict";
-
 $(document).ready(function() {
 
-    var $body = $("body");
+    var $body = $('body');
     var $document = $(document);
-    var $nav = $(".nav");
+    var $nav = $('.nav');
     var $window = $(window);
     var navOffsetTop = $nav.offset().top;
 
@@ -12,22 +10,23 @@ $(document).ready(function() {
 
         $window.on('scroll', onScroll);
         $window.on('resize', onResize);
-        $("a[href^=\"#\"]").on('click', smoothScroll);
+        $('a[href^="#"]').on('click', smoothScroll);
 
     }
 
     function smoothScroll() {
 
-        var $target = $(this.hash);
+        var target = this.hash;
+        var $target = $(target);
 
         $('html, body').stop().animate({
-            'scrollTop': $target.offset().top-40
+            'scrollTop': $target.offset().top - 40
         }, 0, 'swing', function() {
             window.location.hash = target;
-            $document.on("scroll", onScroll);
-        })
+            $document.on('scroll', onScroll);
+        });
 
-        $document.off("scroll");
+        $document.off('scroll');
 
         return false;
 
@@ -35,7 +34,7 @@ $(document).ready(function() {
 
     function onResize() {
 
-        $nav.removeClass("nav-docked");
+        $nav.removeClass('nav-docked');
         navOffsetTop = $nav.offset().top;
         onScroll();
 
@@ -43,12 +42,12 @@ $(document).ready(function() {
 
     function onScroll() {
 
-        if (navOffsetTop < $window.scrollTop() && !$body.hasClass("has-nav-docked")) {
-            $body.addClass("has-nav-docked");
+        if (navOffsetTop < $window.scrollTop() && !$body.hasClass('has-nav-docked')) {
+            $body.addClass('has-nav-docked');
         }
 
-        if (navOffsetTop > $window.scrollTop() && $body.hasClass("has-nav-docked")) {
-            $body.removeClass("has-nav-docked");
+        if (navOffsetTop > $window.scrollTop() && $body.hasClass('has-nav-docked')) {
+            $body.removeClass('has-nav-docked');
         }
 
     }
