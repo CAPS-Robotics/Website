@@ -35,5 +35,13 @@
     "normalize.css": "^3.0.3",
     "run-sequence": "^1.1.1"
   },
+  "config": {
+    "directories": {
+      "archive": "archive",
+      "dist": "dist",
+      "src": "src",
+      "test": "test"
+    }
+  },
   "private": true
 }
