@@ -37,6 +37,13 @@ address {
 .value {
     text-align: center;
 }
+.value > img {
+    margin-bottom: 1rem;
+}
+.value > p {
+    padding-top: 1rem;
+    border-top: 1px solid #5D9CEC;
+}
 
 .date {
     color: #3C3B3D;
@@ -101,7 +108,7 @@ address {
         text-transform: capitalize;
     }
     .nav-item > a:hover {
-        color: #33C3F0;
+        color: #5D9CEC;
     }
     .has-nav-docked .nav {
         position: fixed;
