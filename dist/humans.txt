@@ -1,0 +1,15 @@
+# humanstxt.org
+# The humans responsible & technology colophon
+
+# TEAM
+
+    Dominic Tassio -- Developer -- https://github.com/dominictassio
+
+# THANKS
+
+    FRC Team 2410 The Metal Mustangs
+
+# TECHNOLOGY COLOPHON
+
+    CSS3, HTML5
+    jQuery, Skeleton, Normalize.css
