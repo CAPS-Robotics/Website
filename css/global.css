@@ -41,8 +41,10 @@ address {
     margin-bottom: 1rem;
 }
 .value > p {
-    padding-top: 1rem;
-    border-top: 1px solid #5D9CEC;
+    margin-top: 1rem;
+    margin-bottom: 0;
+    padding-bottom: 2rem;
+    border-bottom: 1px solid #5D9CEC;
 }
 
 .date {
@@ -64,7 +66,6 @@ address {
 
     .intro {
         margin-top: 8rem;
-        text-align: 
     }
     .intro-text {
         text-align: left;
