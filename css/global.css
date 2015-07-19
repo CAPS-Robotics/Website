@@ -3,8 +3,8 @@ a {
 }
 
 section {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
 
 address {
@@ -12,7 +12,7 @@ address {
 }
 
 .intro {
-    margin-top: 8rem;
+    margin-top: 2rem;
     text-align: center;
 }
 
@@ -28,9 +28,10 @@ address {
 }
 
 .values {
-    padding-top: 8rem;
-    padding-bottom: 8rem;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
 }
+
 .value {
     text-align: center;
 }
@@ -40,7 +41,21 @@ address {
 }
 
 /* Larger than a phone */
-@media (min-width: 550px) {}
+@media (min-width: 550px) {
+    section {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+
+    .intro {
+        margin-top: 8rem;
+    }
+
+    .values {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
 
 /* Larger than a tablet */
 @media (min-width: 750px) {
