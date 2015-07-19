@@ -15,16 +15,9 @@ address {
     margin-top: 2rem;
     text-align: center;
 }
-
-.title-image {
+.intro-image {
     width: 24rem;
     height: 24rem;
-}
-.title-text {
-    text-align: left;
-}
-.title-button {
-    float: left;
 }
 
 .values {
@@ -49,6 +42,13 @@ address {
 
     .intro {
         margin-top: 8rem;
+        text-align: 
+    }
+    .intro-text {
+        text-align: left;
+    }
+    .intro-button {
+        float: left;
     }
 
     .values {
