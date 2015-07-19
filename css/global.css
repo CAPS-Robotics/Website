@@ -1,0 +1,85 @@
+a {
+    text-decoration: none;
+}
+
+section {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+
+address {
+    margin-bottom: 2.5rem;
+}
+
+.intro {
+    margin-top: 8rem;
+    text-align: center;
+}
+
+.title-image {
+    width: 24rem;
+    height: 24rem;
+}
+.title-text {
+    text-align: left;
+}
+.title-button {
+    float: left;
+}
+
+.values {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+}
+.value {
+    text-align: center;
+}
+
+.nav {
+    display: none;
+}
+
+/* Larger than a phone */
+@media (min-width: 550px) {}
+
+/* Larger than a tablet */
+@media (min-width: 750px) {
+    .nav {
+        z-index: 6;
+        display: block;
+        width: 100%;
+        height: 6rem;
+        background: #fff;
+    }
+    .nav-list {
+        margin-bottom: 0;
+        list-style: none;
+    }
+    .nav-item {
+        position: relative;
+        display: inline-block;
+        margin-bottom: 0;
+    }
+    .nav-item > a {
+        margin-right: 16px;
+        margin-left: 16px;
+        font-size: 13px;
+        font-weight: 600;
+        line-height: 6rem;
+        letter-spacing: .2rem;
+        color: #222;
+        text-transform: capitalize;
+    }
+    .nav-item > a:hover {
+        color: #33C3F0;
+    }
+    .hav-nav-docked {
+        margin-top: 6rem;
+    }
+    .has-nav-docked .nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        border-bottom: 1px solid #ddd;
+    }
+}
