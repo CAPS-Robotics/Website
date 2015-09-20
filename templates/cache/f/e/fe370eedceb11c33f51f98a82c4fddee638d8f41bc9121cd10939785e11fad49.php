@@ -59,6 +59,7 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
                         <p>Voluptate fugiat tempora doloremque dolorem quis aut deleniti quod, culpa et rerum velit, distinctio autem, nemo.</p>
                     </div>
                 </div>
+                <div id=\"carousel-controller\" class=\"carousel-controller\"></div>
 
             </div>
         </div>
@@ -66,16 +67,17 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
     </div>
 
     <script src=\"";
-        // line 47
+        // line 48
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/js/utilities.js\"></script>
     <script src=\"";
-        // line 48
+        // line 49
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/js/carousel.js\"></script>
     <script>
 
-    var carousel = new Carousel(document.querySelector('#carousel'));
+    var carousel = new Carousel(document.querySelector('#carousel'),
+                                document.querySelector('#carousel-controller'));
 
     </script>
 
@@ -96,7 +98,7 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
 
     public function getDebugInfo()
     {
-        return array (  74 => 48,  70 => 47,  29 => 9,  19 => 1,);
+        return array (  75 => 49,  71 => 48,  29 => 9,  19 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -139,6 +141,7 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
 /*                         <p>Voluptate fugiat tempora doloremque dolorem quis aut deleniti quod, culpa et rerum velit, distinctio autem, nemo.</p>*/
 /*                     </div>*/
 /*                 </div>*/
+/*                 <div id="carousel-controller" class="carousel-controller"></div>*/
 /* */
 /*             </div>*/
 /*         </div>*/
@@ -149,7 +152,8 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
 /*     <script src="{{ baseUrl() }}/js/carousel.js"></script>*/
 /*     <script>*/
 /* */
-/*     var carousel = new Carousel(document.querySelector('#carousel'));*/
+/*     var carousel = new Carousel(document.querySelector('#carousel'),*/
+/*                                 document.querySelector('#carousel-controller'));*/
 /* */
 /*     </script>*/
 /* */

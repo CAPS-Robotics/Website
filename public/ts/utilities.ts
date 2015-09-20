@@ -12,7 +12,7 @@ class Utils {
     static removeClass(element: Element, cssClass: string) {
         if (this.hasClass(element, cssClass)) {
             var reg = new RegExp("(\\s|^)" + cssClass + "(\\s|$)");
-            element.className = element.className.replace(reg, " ");
+            element.className = element.className.replace(reg, "");
         }
     }
 

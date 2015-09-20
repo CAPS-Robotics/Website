@@ -35,7 +35,7 @@ var ts_dest     = './public/js';
 gulp.task('sass:build', function() {
     gulp.src(sass_src)
         .pipe(sourcemaps.init())
-            .pipe(sass().on('error', gutil.log))
+            .pipe(sass().on('error', function() {}))        // Prevents crashes
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(sass_dest));
 });
@@ -48,7 +48,7 @@ gulp.task('sass:build', function() {
 gulp.task('ts:build', function() {
     gulp.src(ts_src)
         .pipe(sourcemaps.init())
-            .pipe(typescript().on('error', gutil.log))
+            .pipe(typescript().on('error', function() {}))  // Prevents crashes
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(ts_dest));
 });
@@ -71,7 +71,7 @@ gulp.task('sass:lint', function() {
  */
 gulp.task('ts:lint', function() {
     gulp.src(ts_src)
-        .pipe(tslint())
+        .pipe(tslint().on('error', gutil.log))
         .pipe(tslint.report('prose'));
 });
 
