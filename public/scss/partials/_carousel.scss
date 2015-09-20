@@ -1,0 +1,18 @@
+.carousel {
+    position: relative;
+    height: 20em;
+    margin-bottom: 1em;
+    overflow: hidden;
+
+    &-item {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        transition: left 1s ease;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+}

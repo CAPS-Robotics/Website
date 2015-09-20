@@ -1,0 +1,30 @@
+{
+  "name": "mmr2410.com",
+  "version": "1.0.0",
+  "description": "The homepage for FRC Team 2410, The Metal Mustangs",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "gulp test",
+    "build": "gulp build",
+    "watch": "gulp watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caps-robotics/Website.git"
+  },
+  "author": "Dominic Tassio <dominic.tassio@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/caps-robotics/Website/issues"
+  },
+  "homepage": "https://github.com/caps-robotics/Website#readme",
+  "devDependencies": {
+    "gulp": "^3.9.0",
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.3.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tslint": "^3.2.0",
+    "gulp-typescript": "^2.9.0",
+    "gulp-util": "^3.0.6"
+  }
+}

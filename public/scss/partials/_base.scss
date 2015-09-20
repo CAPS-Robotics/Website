@@ -1,0 +1,23 @@
+@import "modules/all";
+
+html {
+    font-size: $font-root-size;
+}
+
+body {
+    font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-size: $font-base-size;
+    font-weight: $font-base-weight;
+    line-height: $font-base-line-height;
+    color: $text-color;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+
+    &:hover {
+        color: darken($link-color, 10%);
+        text-decoration: underline;
+    }
+}

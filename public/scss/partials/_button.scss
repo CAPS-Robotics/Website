@@ -1,0 +1,66 @@
+@mixin button-variant($color, $background-color) {
+    color: $color;
+    background-color: $background-color;
+    border-bottom-color: darken($background-color, 10%);
+
+    &:hover {
+        color: $color;
+    }
+
+    .active,
+    &:active {
+        background-color: darken($background-color, 5%);
+    }
+}
+
+.button {
+    position: relative;
+    display: inline-block;
+    min-width: $button-min-width;
+    padding: $button-padding-y $button-padding-x;
+    margin-bottom: 1em;
+    color: $text-color;
+    text-align: center;
+    text-decoration: none;
+    white-space: nowrap;
+    vertical-align: middle;
+    cursor: pointer;
+    background-color: transparent;
+    border: 0 solid transparent;
+    border-bottom-color: transparent;
+    border-bottom-width: $button-border-width;
+
+    &:hover {
+        color: $text-color;
+        text-decoration: none;
+    }
+
+    .active,
+    &:active {
+        transform: translateY($button-border-width);
+    }
+
+    &:focus {
+        outline: none;
+    }
+}
+
+.button--default { @include button-variant($button-default-color, $button-default-background); }
+.button--primary { @include button-variant($text-color-inverse, $primary); }
+.button--success { @include button-variant($text-color-inverse, $success); }
+.button--info { @include button-variant($text-color-inverse, $info); }
+.button--warning { @include button-variant($text-color-inverse, $warning); }
+.button--danger { @include button-variant($text-color-inverse, $danger); }
+
+.button--link {
+    @include button-variant($link-color, transparent);
+
+    &:hover {
+        color: darken($link-color, 10%);
+    }
+
+    &:active {
+        color: darken($primary, 10%);
+        transform: none;
+    }
+}

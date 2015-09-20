@@ -1,0 +1,66 @@
+// Colors
+
+$primary:                   #00a8c6;
+$success:                   #c3cb4c;
+$info:                      #3bc7b8;
+$warning:                   #edb92e;
+$danger:                    #ff4e50;
+
+$text-color:                #222;
+$text-color-inverse:        #fff;
+
+$grey-dark:                 #616161;
+$grey:                      #9e9e9e;
+$grey-light:                #e0e0e0;
+
+
+// Base
+$link-color:                $primary;
+$link-decoration:           none;
+
+$text-indent:               2em;
+
+
+// Font
+$font-root-size:            62.5%;
+
+$font-base-size:            1.5em;
+$font-base-weight:          400;
+$font-base-line-height:     1.6;
+
+// Grid
+$grid-breakpoints: (
+    xs: 0,
+    sm: 34em,
+    md: 48em,
+    lg: 62em,
+    xl: 75em
+);
+
+$container-max-widths: (
+    sm: 34em,
+    md: 45em,
+    lg: 60em,
+    xl: 72.25em
+);
+
+$column-padding:        1em;
+
+
+// Buttons
+$button-min-width:          5.5em;
+$button-padding-x:          1.5em;
+$button-padding-y:          0.5em;
+$button-default-color:      $text-color;
+$button-default-background: $grey-light;
+$button-border-width:       0.25em;
+
+
+// Navbar
+$navbar-padding-x:          1.5em;
+$navbar-padding-y:          0.5em;
+$navbar-default-color:      $text-color;
+$navbar-default-background: $grey-light;
+$navbar-border-width:       0.25em;
+
+$navbar-item-min-width:     5.5em;

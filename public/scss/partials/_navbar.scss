@@ -1,0 +1,70 @@
+@mixin navbar-variant($color, $background-color) {
+    background-color: $background-color;
+    border-bottom-color: darken($background-color, 10%);
+
+    .navbar-brand {
+        color: $color;
+    }
+
+    .navbar-list {
+        li > a {
+            color: $color;
+
+            &:hover {
+                background-color: darken($background-color, 5%);
+            }
+        }
+
+        .active {
+            background-color: darken($background-color, 5%);
+        }
+    }
+}
+
+.navbar {
+    border-bottom: $navbar-border-width solid transparent;
+
+    .navbar-brand {
+        display: inline-block;
+        min-width: $navbar-item-min-width;
+        font-weight: bold;
+        color: $text-color;
+        text-align: center;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+
+    .navbar-list {
+        display: inline-block;
+        margin: 0;
+        list-style: none;
+
+        li {
+            display: inline-block;
+
+            > a {
+                display: inline-block;
+                min-width: $navbar-item-min-width;
+                padding: $navbar-padding-y $navbar-padding-x;
+                color: $text-color;
+                text-align: center;
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.navbar--default { @include navbar-variant($navbar-default-color, $navbar-default-background); }
+.navbar--primary { @include navbar-variant($text-color-inverse, $primary); }
+.navbar--success { @include navbar-variant($text-color-inverse, $success); }
+.navbar--info { @include navbar-variant($text-color-inverse, $info); }
+.navbar--warning { @include navbar-variant($text-color-inverse, $warning); }
+.navbar--danger { @include navbar-variant($text-color-inverse, $danger); }
+
+.navbar--fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+    width: 100%;
+}

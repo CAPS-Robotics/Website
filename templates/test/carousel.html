@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ baseUrl() }}/css/mmr.css">
+
+    <style>
+
+    body {
+        margin-top: 5.25em;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="md-five columns">
+
+                <div id="carousel" class="carousel">
+                    <div>
+                        <img src="http://lorempixel.com/400/200/city" alt="city">
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aliquam eos non! Tempore, exercitationem temporibus a.</p>
+                    </div>
+                    <div>
+                        <img src="http://lorempixel.com/400/200/cats" alt="cats">
+                        <p>Dolores aperiam repudiandae dicta tenetur ratione esse placeat iure aliquid eaque aliquam, rem! Pariatur, hic, expedita?</p>
+                    </div>
+                    <div>
+                        <img src="http://lorempixel.com/400/200/food" alt="food">
+                        <p>Voluptate fugiat tempora doloremque dolorem quis aut deleniti quod, culpa et rerum velit, distinctio autem, nemo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{{ baseUrl() }}/js/utilities.js"></script>
+    <script src="{{ baseUrl() }}/js/carousel.js"></script>
+    <script>
+
+    var carousel = new Carousel(document.querySelector('#carousel'));
+
+    </script>
+
+</body>
+</html>

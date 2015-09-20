@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>FRC Team 2410 :: The Metal Mustangs</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ baseUrl() }}/css/mmr.css">
+
+    <style>
+
+    body {
+        margin-top: 5.25em;
+    }
+
+    </style>
+
+    {% block customHead %}{% endblock %}
+</head>
+<body>
+
+    <nav class="navbar navbar--primary navbar--fixed">
+        <div class="container">
+            <a href="{{ baseUrl() }}" class="navbar-brand">2410</a>
+            <ul class="navbar-list">
+                <li><a href="{{ baseUrl() }}">Home</a></li>
+                <li><a href="{{ baseUrl() }}/team">Team</a></li>
+                <li><a href="{{ baseUrl() }}/media">Media</a></li>
+                <li><a href="{{ baseUrl() }}/community">Community</a></li>
+                <li><a href="{{ baseUrl() }}/robots">Robots</a></li>
+                <li><a href="{{ baseUrl() }}/contact">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container">
+
+        {% block content %}{% endblock %}
+
+    </div>
+
+</body>
+</html>
