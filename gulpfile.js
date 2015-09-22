@@ -16,12 +16,12 @@ var gutil       = require('gulp-util');
 // | Variables                                                                 |
 // +---------------------------------------------------------------------------+
 
-var sass_src    = './public/scss/**/*.scss';
-var sass_dest   = './public/css';
-var sass_lint   = './public/scss/.scsslint.yml';
+var sass_src    = 'public/scss/**/*.scss';
+var sass_dest   = 'public/css';
+var sass_lint   = 'public/scss/.scsslint.yml';
 
-var ts_src      = './public/ts/**/*.ts';
-var ts_dest     = './public/js';
+var ts_src      = 'public/ts/**/*.ts';
+var ts_dest     = 'public/js';
 
 // +---------------------------------------------------------------------------+
 // | Tasks                                                                     |
@@ -35,7 +35,7 @@ var ts_dest     = './public/js';
 gulp.task('sass:build', function() {
     gulp.src(sass_src)
         .pipe(sourcemaps.init())
-            .pipe(sass().on('error', function() {}))        // Prevents crashes
+            .pipe(sass().on('error', sass.logError))        // Prevents crashes
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(sass_dest));
 });
@@ -59,7 +59,7 @@ gulp.task('ts:build', function() {
  * config:  sass_lint
  */
 gulp.task('sass:lint', function() {
-    gulp.src(['!./public/scss/vendor/_normalize.scss', sass_src])
+    gulp.src(['!./public/scss/libraries/_normalize.scss', sass_src])
         .pipe(scss_lint({
             'config': sass_lint
         }));

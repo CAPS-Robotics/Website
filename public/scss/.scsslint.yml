@@ -17,7 +17,7 @@ linters:
 
   Comment:
     enabled: true
-    exclude: ['vendor/_normalize.scss', 'mmr.scss']
+    exclude: ['libraries/_normalize.scss', 'mmr.scss']
 
   DebugStatement:
     enabled: true
@@ -94,7 +94,7 @@ linters:
     enabled: true
     ignore_unspecified: false
     severity: warning
-    exclude: ['vendor/_normalize.scss']
+    exclude: ['libraries/_normalize.scss']
     order: [
       "position",
       "top",
@@ -445,11 +445,11 @@ linters:
   UrlQuotes:
     enabled: true
 
-  VendorPrefixes:
+  librariesPrefixes:
     enabled: true
     identifier_list: base
     include: []
-    exclude: ['vendor/_normalize.scss']
+    exclude: ['libraries/_normalize.scss']
 
   ZeroUnit:
     enabled: true
