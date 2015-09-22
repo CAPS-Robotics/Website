@@ -31,19 +31,23 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
         echo "
     <div class=\"row\">
         <div class=\"md-five columns\">
-            <img src=\"http://placehold.it/320x240\" width=\"100%\">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eos amet quas, eveniet illo sit molestiae quis quae saepe expedita.</p>
 
-            <div>
-                <a class=\"twitter-timeline\" data-dnt=\"true\" href=\"https://twitter.com/Team2410\" data-widget-id=\"554386837306105856\">Tweets by @Team2410</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+\"://platform.twitter.com/widgets.js\";fjs.parentNode.insertBefore(js,fjs);}}(document,\"script\",\"twitter-wjs\");</script>
-            </div>
+            ";
+        // line 8
+        $this->loadTemplate("includes/carousel.html", "index.html", 8)->display($context);
+        // line 9
+        echo "
+            ";
+        // line 10
+        $this->loadTemplate("includes/twitter.html", "index.html", 10)->display($context);
+        // line 11
+        echo "
         </div>
         <div class=\"md-seven columns\">
             <h3 class=\"text-info\">Who are we?</h3>
             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel ratione nulla nobis architecto, voluptate iure, accusantium consectetur rerum perspiciatis ea obcaecati, iusto expedita quisquam dolor totam, distinctio voluptatum enim suscipit sint. Veritatis, aperiam, sunt. Amet sint cumque tempora est ex voluptates, excepturi nostrum veniam assumenda.</p>
             <p>Questions? <a href=\"";
-        // line 18
+        // line 16
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/contact\" class=\"button button--primary\">Get in touch!</a> or <a href=\"mailto:captain@mmr2410.com\" class=\"button button--primary\">captain@mmr2410.com</a></p>
 
@@ -89,7 +93,7 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
 
     public function getDebugInfo()
     {
-        return array (  47 => 18,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  51 => 16,  44 => 11,  42 => 10,  39 => 9,  37 => 8,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends "base/base.html" %}*/
@@ -98,13 +102,11 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
 /* */
 /*     <div class="row">*/
 /*         <div class="md-five columns">*/
-/*             <img src="http://placehold.it/320x240" width="100%">*/
-/*             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eos amet quas, eveniet illo sit molestiae quis quae saepe expedita.</p>*/
 /* */
-/*             <div>*/
-/*                 <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Team2410" data-widget-id="554386837306105856">Tweets by @Team2410</a>*/
-/*                 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>*/
-/*             </div>*/
+/*             {% include "includes/carousel.html" %}*/
+/* */
+/*             {% include "includes/twitter.html" %}*/
+/* */
 /*         </div>*/
 /*         <div class="md-seven columns">*/
 /*             <h3 class="text-info">Who are we?</h3>*/

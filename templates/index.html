@@ -4,13 +4,11 @@
 
     <div class="row">
         <div class="md-five columns">
-            <img src="http://placehold.it/320x240" width="100%">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ut eos amet quas, eveniet illo sit molestiae quis quae saepe expedita.</p>
 
-            <div>
-                <a class="twitter-timeline" data-dnt="true" href="https://twitter.com/Team2410" data-widget-id="554386837306105856">Tweets by @Team2410</a>
-                <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
-            </div>
+            {% include "includes/carousel.html" %}
+
+            {% include "includes/twitter.html" %}
+
         </div>
         <div class="md-seven columns">
             <h3 class="text-info">Who are we?</h3>
