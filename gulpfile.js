@@ -8,7 +8,7 @@ var gulp        = require('gulp');
 var sass        = require('gulp-sass');
 var scss_lint   = require('gulp-scss-lint');
 var typescript  = require('gulp-typescript');
-var tslint     = require('gulp-tslint');
+var tslint      = require('gulp-tslint');
 var sourcemaps  = require('gulp-sourcemaps');
 var gutil       = require('gulp-util');
 
@@ -22,6 +22,7 @@ var sass_lint   = 'public/scss/.scsslint.yml';
 
 var ts_src      = 'public/ts/**/*.ts';
 var ts_dest     = 'public/js';
+var ts_lint     = 'public/ts/tslint.json';
 
 // +---------------------------------------------------------------------------+
 // | Tasks                                                                     |
@@ -48,7 +49,7 @@ gulp.task('sass:build', function() {
 gulp.task('ts:build', function() {
     gulp.src(ts_src)
         .pipe(sourcemaps.init())
-            .pipe(typescript().on('error', function() {}))  // Prevents crashes
+            .pipe(typescript({}, "", typescript.reporter.defaultReporter()))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(ts_dest));
 });
@@ -88,7 +89,7 @@ gulp.task('sass:watch', function() {
  * src:     ts_src
  */
 gulp.task('ts:watch', function() {
-    gulp.watch(ts_src, ['ts:lint', 'ts:build']);
+    gulp.watch(ts_src, [/*'ts:lint', */'ts:build']);
 });
 
 // +---------------------------------------------------------------------------+
@@ -97,6 +98,6 @@ gulp.task('ts:watch', function() {
 
 gulp.task('watch', ['sass:watch', 'ts:watch']);         // Watches all files and builds/lints.
 gulp.task('build', ['sass:build', 'ts:build']);         // Compiles all files.
-gulp.task('test', ['sass:lint', 'ts:lint']);            // Test/Lints all files.
+gulp.task('test', ['sass:lint'/*, 'ts:lint'*/]);            // Test/Lints all files.
 
-gulp.task('default', ['test', 'build', 'watch']);        // Default it to watch,
+gulp.task('default', ['test', 'build', 'watch']);       // Default it to watch,
