@@ -20,5 +20,9 @@
 .text-warning { color: $warning; }
 .text-danger { color: $danger; }
 
-.pull-left { float: left; }
-.pull-right { float: right; }
+.padding { padding: 1em; }
+.padding-lr { padding: 0 1em; }
+.padding-tb { padding: 1em 0; }
+
+.pull-left { float: left !important; }
+.pull-right { float: right !important; }

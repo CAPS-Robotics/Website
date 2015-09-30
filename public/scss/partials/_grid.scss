@@ -23,6 +23,31 @@
     .#{$prefix}-eleven.columns { width: percentage(11 / 12); }
     .#{$prefix}-twelve.column,
     .#{$prefix}-twelve.columns { width: percentage(12 / 12); }
+
+    .#{prefix}-by-one.column,
+    .#{prefix}-by-one.columns { margin-left: percentage(1 / 12); }
+    .#{prefix}-by-two.column,
+    .#{prefix}-by-two.columns { margin-left: percentage(2 / 12); }
+    .#{prefix}-by-three.column,
+    .#{prefix}-by-three.columns { margin-left: percentage(3 / 12); }
+    .#{prefix}-by-four.column,
+    .#{prefix}-by-four.columns { margin-left: percentage(4 / 12); }
+    .#{prefix}-by-five.column,
+    .#{prefix}-by-five.columns { margin-left: percentage(5 / 12); }
+    .#{prefix}-by-six.column,
+    .#{prefix}-by-six.columns { margin-left: percentage(6 / 12); }
+    .#{prefix}-by-seven.column,
+    .#{prefix}-by-seven.columns { margin-left: percentage(7 / 12); }
+    .#{prefix}-by-eight.column,
+    .#{prefix}-by-eight.columns { margin-left: percentage(8 / 12); }
+    .#{prefix}-by-nine.column,
+    .#{prefix}-by-nine.columns { margin-left: percentage(9 / 12); }
+    .#{prefix}-by-ten.column,
+    .#{prefix}-by-ten.columns { margin-left: percentage(10 / 12); }
+    .#{prefix}-by-eleven.column,
+    .#{prefix}-by-eleven.columns { margin-left: percentage(11 / 12); }
+    .#{prefix}-by-twelve.column,
+    .#{prefix}-by-twelve.columns { margin-left: percentage(12 / 12); }
 }
 
 .container {

@@ -46,11 +46,16 @@ h6 {
 
 p {
     margin-top: 0;
-    text-indent: $text-indent;
 
     a,
     span {
         text-indent: 0;
+    }
+}
+
+@include media-breakpoint-up(sm) {
+    p {
+        text-indent: $text-indent;
     }
 }
 

@@ -1,99 +1,83 @@
+/// <reference path="jquery.d.ts" />
+
 class Carousel {
-    private element: HTMLElement;
-    private controller: HTMLElement;
-    private items: HTMLCollection;
-    private itemCount: number;
-    private targetItem: number;
-    private time: number;
+    private element: JQuery;
+    private itemContainer: JQuery;
+    private items: JQuery;
+    private controller: JQuery;
+    private controls: JQuery;
+    private time: Number = 6000;
+    private target: number = 0;
     private loop;
 
-    constructor(element: HTMLElement, controller: HTMLElement) {
-        this.element = element;
-        this.controller = controller;
-        this.items = this.element.children;
-        this.itemCount = this.items.length;
-        this.targetItem = 0;
-        this.time = 6000;
+    constructor(selector: string) {
+        this.element = jQuery(selector);
+        this.itemContainer = this.element.children("#carousel-items");
+        this.items = this.itemContainer.children();
+        this.controller = this.element.children("#carousel-controls");
 
-        this.initializeDOM();
-        this.startUpdateLoop();
+        this.initialize();
     }
 
-    private startUpdateLoop() {
-        this.loop = setInterval(this.updateLoop, this.time, this);
+    private initialize() {
+        this.createControls();
+        this.rotate();
+        this.startLoop();
     }
 
-    private updateLoop(carousel: Carousel) {
-        carousel.targetItem++;
-        carousel.setItemsLocations();
-        carousel.setTextInvisibleWhenNotTargeted();
-        carousel.fillTargetedControl();
+    private startLoop() {
+        this.loop = window.setInterval(function(carousel) {
+            carousel.updateTarget();
+            carousel.rotate();
+        }, this.time, this);
     }
 
-    private initializeDOM() {
-        this.addCarouselItemClass();
-        this.setItemsLocations();
-        this.makeControls();
-        this.fillTargetedControl();
+    private updateTarget(target = this.target + 1) {
+        this.target = target % this.items.length;
     }
 
-    private addCarouselItemClass() {
-        for (var i = 0; i < this.itemCount; i++) {
-            Utils.addClass(this.items[i], "carousel-item");
-        }
-    }
+    private rotate() {
+        var target = this.target;
 
-    private setItemsLocations() {
-        for (var i = 0; i < this.itemCount; i++) {
-            this.setItemLocation(this.items[i], i, this.itemCount, this.targetItem);
-        }
-    }
-
-    private setItemLocation(item: Element, index: number, length: number, target: number) {
-        var offset: number = this.getCalculatedItemLocation(index, length, target) * this.element.clientWidth;
-        var zIndex: number = length + this.getCalculatedItemLocation(index, length, target);
-        item.setAttribute("style", "left: " + offset.toString() + "px; z-index: " + zIndex + ";");
-    }
-
-    private getCalculatedItemLocation(index: number, length: number, target: number): number {
-        var value: number = (target - index) % length;
-        var mid: number = Math.floor(length / 2);
-        return (value <= mid && value >= -mid) ?
-            value :
-            ((value > mid) ?
-                (value - length) :
-                (value + length));
-    }
-
-    private setTextInvisibleWhenNotTargeted() {
-        for (var i = 0; i < this.itemCount; i++) {
-            var item: Element = this.items[i];
-
-            if (i !== this.targetItem % this.itemCount) {
-                Utils.addClass(item, "carousel-text-hidden");
+        jQuery.each(this.items, function(index, value) {
+            if (index != target) {
+                $(value).addClass("carousel-hidden");
             } else {
-                Utils.removeClass(item, "carousel-text-hidden");
+                $(value).removeClass("carousel-hidden");
             }
-        }
-    }
+        });
 
-    private makeControls() {
-        for (var i = 0; i < this.itemCount; i++) {
-            var control: HTMLElement = document.createElement("span");
-            Utils.addClass(control, "carousel-control");
-            this.controller.appendChild(control);
-        }
-    }
-
-    private fillTargetedControl() {
-        for (var i = 0; i < this.itemCount; i++) {
-            var control: Element = this.controller.children[i];
-
-            if (i !== this.targetItem % this.itemCount) {
-                Utils.removeClass(control, "carousel-control--active");
+        jQuery.each(this.controls, function(index, value) {
+            if (index != target) {
+                $(value).removeClass("carousel-control--active");
             } else {
-                Utils.addClass(control, "carousel-control--active");
+                $(value).addClass("carousel-control--active");
             }
+        });
+
+    }
+
+    private createControls() {
+        var carousel = this;
+
+        for (var i = 0; i < this.items.length; i++) {
+            this.controller.append($("<div></div>")
+                                    .addClass("carousel-control")
+                                    .attr("data-carousel-index", i.toString())
+                                    .on('click', function(event) {
+                                        var $self = $(this);
+                                        var target = parseInt($self.attr("data-carousel-index"));
+
+                                        carousel.updateTarget(target);
+                                        carousel.rotate();
+
+                                        window.clearInterval(carousel.loop);
+                                        carousel.startLoop();
+
+                                        return false;
+                                    }));
         }
+
+        this.controls = this.controller.children();
     }
 }

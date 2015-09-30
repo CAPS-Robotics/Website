@@ -46,20 +46,22 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
             <div class=\"md-five columns\">
 
                 <div id=\"carousel\" class=\"carousel\">
-                    <div>
-                        <img src=\"http://lorempixel.com/400/200/city\" alt=\"city\">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aliquam eos non! Tempore, exercitationem temporibus a.</p>
+                    <div id=\"carousel-items\" class=\"carousel-items\">
+                        <div class=\"carousel-item\">
+                            <img src=\"http://lorempixel.com/400/200/city\">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis similique harum eum enim unde repellat hic, laudantium cupiditate, excepturi nulla.</p>
+                        </div>
+                        <div class=\"carousel-item\">
+                            <img src=\"http://lorempixel.com/400/200/sports\">
+                            <p>Quia, fuga dolorum blanditiis odio iste, minima deserunt possimus illum, eum mollitia nobis nam ex optio, aut amet quidem doloremque.</p>
+                        </div>
+                        <div class=\"carousel-item\">
+                            <img src=\"http://lorempixel.com/400/200/food\">
+                            <p>Qui similique commodi autem a, at, delectus dolores amet voluptatem quisquam quae aspernatur tempore veritatis dolorem eligendi et inventore cupiditate?</p>
+                        </div>
                     </div>
-                    <div>
-                        <img src=\"http://lorempixel.com/400/200/cats\" alt=\"cats\">
-                        <p>Dolores aperiam repudiandae dicta tenetur ratione esse placeat iure aliquid eaque aliquam, rem! Pariatur, hic, expedita?</p>
-                    </div>
-                    <div>
-                        <img src=\"http://lorempixel.com/400/200/food\" alt=\"food\">
-                        <p>Voluptate fugiat tempora doloremque dolorem quis aut deleniti quod, culpa et rerum velit, distinctio autem, nemo.</p>
-                    </div>
+                    <div id=\"carousel-controls\" class=\"carousel-controls\"></div>
                 </div>
-                <div id=\"carousel-controller\" class=\"carousel-controller\"></div>
 
             </div>
         </div>
@@ -67,17 +69,16 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
     </div>
 
     <script src=\"";
-        // line 48
+        // line 50
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
-        echo "/js/utilities.js\"></script>
+        echo "/js/jquery-1.11.3.min.js\"></script>
     <script src=\"";
-        // line 49
+        // line 51
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/js/carousel.js\"></script>
     <script>
 
-    var carousel = new Carousel(document.querySelector('#carousel'),
-                                document.querySelector('#carousel-controller'));
+    var carousel = new Carousel(\"#carousel\");
 
     </script>
 
@@ -98,7 +99,7 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
 
     public function getDebugInfo()
     {
-        return array (  75 => 49,  71 => 48,  29 => 9,  19 => 1,);
+        return array (  77 => 51,  73 => 50,  29 => 9,  19 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -128,32 +129,33 @@ class __TwigTemplate_ed507cdc54f68f0b057625a5b5f2938d08f9b7f50b1ddeda72c14205863
 /*             <div class="md-five columns">*/
 /* */
 /*                 <div id="carousel" class="carousel">*/
-/*                     <div>*/
-/*                         <img src="http://lorempixel.com/400/200/city" alt="city">*/
-/*                         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ea aliquam eos non! Tempore, exercitationem temporibus a.</p>*/
+/*                     <div id="carousel-items" class="carousel-items">*/
+/*                         <div class="carousel-item">*/
+/*                             <img src="http://lorempixel.com/400/200/city">*/
+/*                             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis similique harum eum enim unde repellat hic, laudantium cupiditate, excepturi nulla.</p>*/
+/*                         </div>*/
+/*                         <div class="carousel-item">*/
+/*                             <img src="http://lorempixel.com/400/200/sports">*/
+/*                             <p>Quia, fuga dolorum blanditiis odio iste, minima deserunt possimus illum, eum mollitia nobis nam ex optio, aut amet quidem doloremque.</p>*/
+/*                         </div>*/
+/*                         <div class="carousel-item">*/
+/*                             <img src="http://lorempixel.com/400/200/food">*/
+/*                             <p>Qui similique commodi autem a, at, delectus dolores amet voluptatem quisquam quae aspernatur tempore veritatis dolorem eligendi et inventore cupiditate?</p>*/
+/*                         </div>*/
 /*                     </div>*/
-/*                     <div>*/
-/*                         <img src="http://lorempixel.com/400/200/cats" alt="cats">*/
-/*                         <p>Dolores aperiam repudiandae dicta tenetur ratione esse placeat iure aliquid eaque aliquam, rem! Pariatur, hic, expedita?</p>*/
-/*                     </div>*/
-/*                     <div>*/
-/*                         <img src="http://lorempixel.com/400/200/food" alt="food">*/
-/*                         <p>Voluptate fugiat tempora doloremque dolorem quis aut deleniti quod, culpa et rerum velit, distinctio autem, nemo.</p>*/
-/*                     </div>*/
+/*                     <div id="carousel-controls" class="carousel-controls"></div>*/
 /*                 </div>*/
-/*                 <div id="carousel-controller" class="carousel-controller"></div>*/
 /* */
 /*             </div>*/
 /*         </div>*/
 /* */
 /*     </div>*/
 /* */
-/*     <script src="{{ baseUrl() }}/js/utilities.js"></script>*/
+/*     <script src="{{ baseUrl() }}/js/jquery-1.11.3.min.js"></script>*/
 /*     <script src="{{ baseUrl() }}/js/carousel.js"></script>*/
 /*     <script>*/
 /* */
-/*     var carousel = new Carousel(document.querySelector('#carousel'),*/
-/*                                 document.querySelector('#carousel-controller'));*/
+/*     var carousel = new Carousel("#carousel");*/
 /* */
 /*     </script>*/
 /* */

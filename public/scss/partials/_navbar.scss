@@ -7,6 +7,11 @@
     }
 
     .navbar-list {
+
+        &:before {
+            color: $color;
+        }
+
         li > a {
             color: $color;
 
@@ -23,33 +28,34 @@
 
 .navbar {
     border-bottom: $navbar-border-width solid transparent;
+}
 
-    .navbar-brand {
+.navbar-brand {
+    display: inline-block;
+    min-width: $navbar-item-min-width;
+    padding: $navbar-padding-y $navbar-padding-x;
+    font-weight: bold;
+    color: $text-color;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+.navbar-list {
+    display: inline-block;
+    margin: 0;
+    list-style: none;
+
+    li {
         display: inline-block;
-        min-width: $navbar-item-min-width;
-        font-weight: bold;
-        color: $text-color;
-        text-align: center;
-        text-decoration: none;
-        text-transform: uppercase;
-    }
 
-    .navbar-list {
-        display: inline-block;
-        margin: 0;
-        list-style: none;
-
-        li {
+        > a {
             display: inline-block;
-
-            > a {
-                display: inline-block;
-                min-width: $navbar-item-min-width;
-                padding: $navbar-padding-y $navbar-padding-x;
-                color: $text-color;
-                text-align: center;
-                text-decoration: none;
-            }
+            min-width: $navbar-item-min-width;
+            padding: $navbar-padding-y $navbar-padding-x;
+            color: $text-color;
+            text-align: center;
+            text-decoration: none;
         }
     }
 }
@@ -67,4 +73,19 @@
     left: 0;
     z-index: 99;
     width: 100%;
+}
+
+@include media-breakpoint-down(md) {
+    .navbar-list {
+        height: 0;
+        padding: 0;
+        overflow: none;
+
+        &:before {
+            padding: $navbar-padding-y $navbar-padding-x;
+            color: $text-color;
+            text-align: right;
+            content: "Menu";
+        }
+    }
 }

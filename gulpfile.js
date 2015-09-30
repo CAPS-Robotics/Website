@@ -36,7 +36,7 @@ var ts_lint     = 'public/ts/tslint.json';
 gulp.task('sass:build', function() {
     gulp.src(sass_src)
         .pipe(sourcemaps.init())
-            .pipe(sass().on('error', sass.logError))        // Prevents crashes
+            .pipe(sass().on('error', sass.logError))
         .pipe(sourcemaps.write())
         .pipe(gulp.dest(sass_dest));
 });

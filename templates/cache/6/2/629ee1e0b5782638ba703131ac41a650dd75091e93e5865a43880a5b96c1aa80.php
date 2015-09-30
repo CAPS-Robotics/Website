@@ -49,7 +49,7 @@ class __TwigTemplate_65cfc533ea843aaebd52ef54b830551f25defc975d0e8a0273caa3a5e82
     <div class=\"row\">
         <div class=\"md-five columns\">
             <img src=\"https://maps.googleapis.com/maps/api/staticmap?center=7501 W 149th Terrace, Overland Park, KS 66223&maptype=roadmap&size=560x280&markers=7501 W 149th Terrace, Overland Park, KS 66223\" alt=\"Google Maps, Center for Advanced Profession Studies, 7501 W 149th Terrace, Overland Park, KS 66223\" width=\"100%\">
-            <address>
+            <address class=\"padding\">
                 <b>Center for Advanced Professional Stuides</b><br>
                 Our home<br>
                 7501 West 149th Terrace<br>
@@ -79,8 +79,8 @@ class __TwigTemplate_65cfc533ea843aaebd52ef54b830551f25defc975d0e8a0273caa3a5e82
         </div>
         <div class=\"md-three columns\">
             <h3 class=\"text-info\">Social Media</h3>
-            <div><a href=\"https://twitter.com/team2410\" class=\"button button--success\">Twitter</a></div>
-            <div><a href=\"https://facebook.com/FRC2410\" class=\"button button--success\">Facebook</a></div>
+            <p class=\"text-no-indent\"><a href=\"https://twitter.com/team2410\" class=\"button button--success\">Twitter</a></p>
+            <p class=\"text-no-indent\"><a href=\"https://facebook.com/FRC2410\" class=\"button button--success\">Facebook</a></p>
         </div>
     </div>
 
@@ -121,7 +121,7 @@ class __TwigTemplate_65cfc533ea843aaebd52ef54b830551f25defc975d0e8a0273caa3a5e82
 /*     <div class="row">*/
 /*         <div class="md-five columns">*/
 /*             <img src="https://maps.googleapis.com/maps/api/staticmap?center=7501 W 149th Terrace, Overland Park, KS 66223&maptype=roadmap&size=560x280&markers=7501 W 149th Terrace, Overland Park, KS 66223" alt="Google Maps, Center for Advanced Profession Studies, 7501 W 149th Terrace, Overland Park, KS 66223" width="100%">*/
-/*             <address>*/
+/*             <address class="padding">*/
 /*                 <b>Center for Advanced Professional Stuides</b><br>*/
 /*                 Our home<br>*/
 /*                 7501 West 149th Terrace<br>*/
@@ -151,8 +151,8 @@ class __TwigTemplate_65cfc533ea843aaebd52ef54b830551f25defc975d0e8a0273caa3a5e82
 /*         </div>*/
 /*         <div class="md-three columns">*/
 /*             <h3 class="text-info">Social Media</h3>*/
-/*             <div><a href="https://twitter.com/team2410" class="button button--success">Twitter</a></div>*/
-/*             <div><a href="https://facebook.com/FRC2410" class="button button--success">Facebook</a></div>*/
+/*             <p class="text-no-indent"><a href="https://twitter.com/team2410" class="button button--success">Twitter</a></p>*/
+/*             <p class="text-no-indent"><a href="https://facebook.com/FRC2410" class="button button--success">Facebook</a></p>*/
 /*         </div>*/
 /*     </div>*/
 /* */

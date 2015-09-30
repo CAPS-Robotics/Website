@@ -17,36 +17,34 @@ class __TwigTemplate_8df522667a08e236ccd26c0d0f6dbbdba0889a51419c5bbb2a8ac257789
     {
         // line 1
         echo "<div id=\"carousel\" class=\"carousel\">
-
-    <div>
-        <img src=\"http://lorempixel.com/400/200/city\" alt=\"\">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa blanditiis sint, cumque praesentium distinctio eligendi iure dolores. Aperiam, atque.</p>
+    <div id=\"carousel-items\" class=\"carousel-items\">
+        <div class=\"carousel-item\">
+            <img src=\"http://lorempixel.com/400/200/city\">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis similique harum eum enim unde repellat hic, laudantium cupiditate, excepturi nulla.</p>
+        </div>
+        <div class=\"carousel-item\">
+            <img src=\"http://lorempixel.com/400/200/sports\">
+            <p>Quia, fuga dolorum blanditiis odio iste, minima deserunt possimus illum, eum mollitia nobis nam ex optio, aut amet quidem doloremque.</p>
+        </div>
+        <div class=\"carousel-item\">
+            <img src=\"http://lorempixel.com/400/200/food\">
+            <p>Qui similique commodi autem a, at, delectus dolores amet voluptatem quisquam quae aspernatur tempore veritatis dolorem eligendi et inventore cupiditate?</p>
+        </div>
     </div>
-    <div>
-        <img src=\"http://lorempixel.com/400/200/food\" alt=\"\">
-        <p>Fugit quas, ipsum rerum natus autem, quaerat illum excepturi, numquam iure placeat facilis! Modi animi, sint magni nam minus neque.</p>
-    </div>
-    <div>
-        <img src=\"http://lorempixel.com/400/200/sports\" alt=\"\">
-        <p>Iusto quisquam inventore impedit dolores quas facere earum voluptatibus repudiandae rem, pariatur, dolore delectus accusamus perferendis et asperiores quaerat nisi?</p>
-    </div>
-
+    <div id=\"carousel-controls\" class=\"carousel-controls\"></div>
 </div>
 
-<div id=\"carousel-controller\" class=\"carousel-controller\"></div>
-
+<script src=\"";
+        // line 19
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/js/jquery-1.11.3.min.js\"></script>
 <script src=\"";
         // line 20
-        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
-        echo "/js/utilities.js\"></script>
-<script src=\"";
-        // line 21
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/js/carousel.js\"></script>
 <script>
 
-var carousel = new Carousel(document.querySelector(\"#carousel\"),
-                            document.querySelector(\"#carousel-controller\"));
+var carousel = new Carousel(\"#carousel\");
 
 </script>
 ";
@@ -64,34 +62,32 @@ var carousel = new Carousel(document.querySelector(\"#carousel\"),
 
     public function getDebugInfo()
     {
-        return array (  44 => 21,  40 => 20,  19 => 1,);
+        return array (  43 => 20,  39 => 19,  19 => 1,);
     }
 }
 /* <div id="carousel" class="carousel">*/
-/* */
-/*     <div>*/
-/*         <img src="http://lorempixel.com/400/200/city" alt="">*/
-/*         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio ipsa blanditiis sint, cumque praesentium distinctio eligendi iure dolores. Aperiam, atque.</p>*/
+/*     <div id="carousel-items" class="carousel-items">*/
+/*         <div class="carousel-item">*/
+/*             <img src="http://lorempixel.com/400/200/city">*/
+/*             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis similique harum eum enim unde repellat hic, laudantium cupiditate, excepturi nulla.</p>*/
+/*         </div>*/
+/*         <div class="carousel-item">*/
+/*             <img src="http://lorempixel.com/400/200/sports">*/
+/*             <p>Quia, fuga dolorum blanditiis odio iste, minima deserunt possimus illum, eum mollitia nobis nam ex optio, aut amet quidem doloremque.</p>*/
+/*         </div>*/
+/*         <div class="carousel-item">*/
+/*             <img src="http://lorempixel.com/400/200/food">*/
+/*             <p>Qui similique commodi autem a, at, delectus dolores amet voluptatem quisquam quae aspernatur tempore veritatis dolorem eligendi et inventore cupiditate?</p>*/
+/*         </div>*/
 /*     </div>*/
-/*     <div>*/
-/*         <img src="http://lorempixel.com/400/200/food" alt="">*/
-/*         <p>Fugit quas, ipsum rerum natus autem, quaerat illum excepturi, numquam iure placeat facilis! Modi animi, sint magni nam minus neque.</p>*/
-/*     </div>*/
-/*     <div>*/
-/*         <img src="http://lorempixel.com/400/200/sports" alt="">*/
-/*         <p>Iusto quisquam inventore impedit dolores quas facere earum voluptatibus repudiandae rem, pariatur, dolore delectus accusamus perferendis et asperiores quaerat nisi?</p>*/
-/*     </div>*/
-/* */
+/*     <div id="carousel-controls" class="carousel-controls"></div>*/
 /* </div>*/
 /* */
-/* <div id="carousel-controller" class="carousel-controller"></div>*/
-/* */
-/* <script src="{{ baseUrl() }}/js/utilities.js"></script>*/
+/* <script src="{{ baseUrl() }}/js/jquery-1.11.3.min.js"></script>*/
 /* <script src="{{ baseUrl() }}/js/carousel.js"></script>*/
 /* <script>*/
 /* */
-/* var carousel = new Carousel(document.querySelector("#carousel"),*/
-/*                             document.querySelector("#carousel-controller"));*/
+/* var carousel = new Carousel("#carousel");*/
 /* */
 /* </script>*/
 /* */

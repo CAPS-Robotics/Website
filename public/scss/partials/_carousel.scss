@@ -1,17 +1,14 @@
 .carousel {
-    position: relative;
-    height: 20em;
     overflow: hidden;
 
     &-item {
-        position: absolute;
         top: 0;
         width: 100%;
         transition: left 1s ease;
     }
 
-    &-text-hidden {
-        color: transparent;
+    &-hidden {
+        display: none;
     }
 
     &-control {
@@ -19,13 +16,18 @@
         width: 1em;
         height: 1em;
         margin: 0 1em;
+        cursor: pointer;
         border: 2px solid $grey;
         border-radius: 1em;
         transition: background-color 1s ease,
                     border-color 1s ease;
+
+        &:hover {
+            border-color: $primary;
+        }
     }
 
-    &-controller {
+    &-controls {
         margin: 0 auto;
         margin-bottom: 1em;
         text-align: center;
