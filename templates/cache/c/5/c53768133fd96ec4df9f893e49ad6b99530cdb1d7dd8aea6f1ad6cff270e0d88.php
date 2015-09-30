@@ -60,21 +60,13 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
                 <li><a href=\"";
         // line 28
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
-        echo "/team\">Team</a></li>
+        echo "/media\">Media</a></li>
                 <li><a href=\"";
         // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
-        echo "/media\">Media</a></li>
-                <li><a href=\"";
-        // line 30
-        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
-        echo "/community\">Community</a></li>
-                <li><a href=\"";
-        // line 31
-        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/robots\">Robots</a></li>
                 <li><a href=\"";
-        // line 32
+        // line 30
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/contact\">Contact</a></li>
             </ul>
@@ -84,9 +76,9 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
     <div class=\"container\">
 
         ";
-        // line 39
+        // line 37
         $this->displayBlock('content', $context, $blocks);
-        // line 40
+        // line 38
         echo "
     </div>
 
@@ -100,7 +92,7 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
     {
     }
 
-    // line 39
+    // line 37
     public function block_content($context, array $blocks = array())
     {
     }
@@ -117,7 +109,7 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 
     public function getDebugInfo()
     {
-        return array (  104 => 39,  99 => 19,  90 => 40,  88 => 39,  78 => 32,  74 => 31,  70 => 30,  66 => 29,  62 => 28,  58 => 27,  53 => 25,  46 => 20,  44 => 19,  31 => 9,  21 => 1,);
+        return array (  96 => 37,  91 => 19,  82 => 38,  80 => 37,  70 => 30,  66 => 29,  62 => 28,  58 => 27,  53 => 25,  46 => 20,  44 => 19,  31 => 9,  21 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -147,9 +139,7 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 /*             <a href="{{ baseUrl() }}" class="navbar-brand">2410</a>*/
 /*             <ul class="navbar-list">*/
 /*                 <li><a href="{{ baseUrl() }}">Home</a></li>*/
-/*                 <li><a href="{{ baseUrl() }}/team">Team</a></li>*/
 /*                 <li><a href="{{ baseUrl() }}/media">Media</a></li>*/
-/*                 <li><a href="{{ baseUrl() }}/community">Community</a></li>*/
 /*                 <li><a href="{{ baseUrl() }}/robots">Robots</a></li>*/
 /*                 <li><a href="{{ baseUrl() }}/contact">Contact</a></li>*/
 /*             </ul>*/
