@@ -94,7 +94,7 @@
             text-align: center;
         }
 
-        &:active li {
+        &:focus li {
             display: block;
         }
     }
