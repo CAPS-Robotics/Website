@@ -77,15 +77,31 @@
 
 @include media-breakpoint-down(md) {
     .navbar-list {
-        height: 0;
+        width: 100%;
         padding: 0;
-        overflow: none;
+        margin: 0;
 
         &:before {
+            display: block;
             padding: $navbar-padding-y $navbar-padding-x;
-            color: $text-color;
-            text-align: right;
+            text-align: center;
             content: "Menu";
+        }
+
+        li {
+            display: none;
+            padding: $navbar-padding-y $navbar-padding-x;
+            text-align: center;
+        }
+
+        &:active li {
+            display: block;
+        }
+    }
+
+    .navbar {
+        .navbar-brand {
+            position: absolute;
         }
     }
 }

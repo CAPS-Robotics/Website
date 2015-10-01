@@ -37,7 +37,7 @@ class __TwigTemplate_8df522667a08e236ccd26c0d0f6dbbdba0889a51419c5bbb2a8ac257789
 <script src=\"";
         // line 19
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
-        echo "/js/jquery-1.11.3.min.js\"></script>
+        echo "/js/zepto.min.js\"></script>
 <script src=\"";
         // line 20
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
@@ -83,7 +83,7 @@ var carousel = new Carousel(\"#carousel\");
 /*     <div id="carousel-controls" class="carousel-controls"></div>*/
 /* </div>*/
 /* */
-/* <script src="{{ baseUrl() }}/js/jquery-1.11.3.min.js"></script>*/
+/* <script src="{{ baseUrl() }}/js/zepto.min.js"></script>*/
 /* <script src="{{ baseUrl() }}/js/carousel.js"></script>*/
 /* <script>*/
 /* */

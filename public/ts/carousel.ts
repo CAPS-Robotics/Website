@@ -11,7 +11,7 @@ class Carousel {
     private loop;
 
     constructor(selector: string) {
-        this.element = jQuery(selector);
+        this.element = $(selector);
         this.itemContainer = this.element.children("#carousel-items");
         this.items = this.itemContainer.children();
         this.controller = this.element.children("#carousel-controls");
@@ -39,7 +39,7 @@ class Carousel {
     private rotate() {
         var target = this.target;
 
-        jQuery.each(this.items, function(index, value) {
+        $.each(this.items, function(index, value) {
             if (index != target) {
                 $(value).addClass("carousel-hidden");
             } else {
@@ -47,7 +47,7 @@ class Carousel {
             }
         });
 
-        jQuery.each(this.controls, function(index, value) {
+        $.each(this.controls, function(index, value) {
             if (index != target) {
                 $(value).removeClass("carousel-control--active");
             } else {
