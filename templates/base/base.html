@@ -16,6 +16,8 @@
 
     </style>
 
+    <script src="{{ baseUrl() }}/js/zepto.min.js"></script>
+
     {% block customHead %}{% endblock %}
 </head>
 <body>
@@ -37,6 +39,14 @@
         {% block content %}{% endblock %}
 
     </div>
+
+    <script>
+
+    $(".navbar-list").on("click", function(e) {
+        $(this).toggleClass("active");
+    })
+
+    </script>
 
 </body>
 </html>

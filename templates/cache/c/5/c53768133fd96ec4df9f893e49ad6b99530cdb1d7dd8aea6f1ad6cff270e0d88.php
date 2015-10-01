@@ -39,34 +39,39 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 
     </style>
 
-    ";
+    <script src=\"";
         // line 19
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/js/zepto.min.js\"></script>
+
+    ";
+        // line 21
         $this->displayBlock('customHead', $context, $blocks);
-        // line 20
+        // line 22
         echo "</head>
 <body>
 
     <nav class=\"navbar navbar--primary navbar--fixed\">
         <div class=\"container\">
             <a href=\"";
-        // line 25
+        // line 27
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "\" class=\"navbar-brand\">2410</a>
             <ul class=\"navbar-list\">
                 <li><a href=\"";
-        // line 27
+        // line 29
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "\">Home</a></li>
                 <li><a href=\"";
-        // line 28
+        // line 30
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/media\">Media</a></li>
                 <li><a href=\"";
-        // line 29
+        // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/robots\">Robots</a></li>
                 <li><a href=\"";
-        // line 30
+        // line 32
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/contact\">Contact</a></li>
             </ul>
@@ -76,23 +81,31 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
     <div class=\"container\">
 
         ";
-        // line 37
+        // line 39
         $this->displayBlock('content', $context, $blocks);
-        // line 38
+        // line 40
         echo "
     </div>
+
+    <script>
+
+    \$(\".navbar-list\").on(\"click\", function(e) {
+        \$(this).toggleClass(\"active\");
+    })
+
+    </script>
 
 </body>
 </html>
 ";
     }
 
-    // line 19
+    // line 21
     public function block_customHead($context, array $blocks = array())
     {
     }
 
-    // line 37
+    // line 39
     public function block_content($context, array $blocks = array())
     {
     }
@@ -109,7 +122,7 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 
     public function getDebugInfo()
     {
-        return array (  96 => 37,  91 => 19,  82 => 38,  80 => 37,  70 => 30,  66 => 29,  62 => 28,  58 => 27,  53 => 25,  46 => 20,  44 => 19,  31 => 9,  21 => 1,);
+        return array (  109 => 39,  104 => 21,  87 => 40,  85 => 39,  75 => 32,  71 => 31,  67 => 30,  63 => 29,  58 => 27,  51 => 22,  49 => 21,  44 => 19,  31 => 9,  21 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -129,6 +142,8 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 /*     }*/
 /* */
 /*     </style>*/
+/* */
+/*     <script src="{{ baseUrl() }}/js/zepto.min.js"></script>*/
 /* */
 /*     {% block customHead %}{% endblock %}*/
 /* </head>*/
@@ -151,6 +166,14 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 /*         {% block content %}{% endblock %}*/
 /* */
 /*     </div>*/
+/* */
+/*     <script>*/
+/* */
+/*     $(".navbar-list").on("click", function(e) {*/
+/*         $(this).toggleClass("active");*/
+/*     })*/
+/* */
+/*     </script>*/
 /* */
 /* </body>*/
 /* </html>*/

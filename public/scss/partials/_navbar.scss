@@ -75,7 +75,7 @@
     width: 100%;
 }
 
-@include media-breakpoint-down(md) {
+@include media-breakpoint-down(sm) {
     .navbar-list {
         width: 100%;
         padding: 0;
@@ -92,10 +92,14 @@
             display: none;
             padding: $navbar-padding-y $navbar-padding-x;
             text-align: center;
+
+            a {
+                display: block;
+            }
         }
 
-        &:focus li {
-            display: block;
+        &.active li {
+            display: block !important;
         }
     }
 
