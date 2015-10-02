@@ -13,6 +13,19 @@
     }
 }
 
+@mixin button-sponsor-variant($color, $outline-color) {
+    margin: 0.25em;
+    color: $color;
+    border: 1px solid $outline-color;
+    border-bottom-color: darken($outline-color, 10%);
+    border-bottom-width: $button-border-width;
+
+    &:hover {
+        color: $color;
+        text-decoration: underline;
+    }
+}
+
 .button {
     position: relative;
     display: inline-block;
@@ -50,6 +63,22 @@
 .button--info { @include button-variant($text-color-inverse, $info); }
 .button--warning { @include button-variant($text-color-inverse, $warning); }
 .button--danger { @include button-variant($text-color-inverse, $danger); }
+
+.button--sponsor-default { @include button-sponsor-variant($primary, $grey-light); }
+.button--sponsor-primary { @include button-sponsor-variant($primary, $primary); }
+.button--sponsor-success { @include button-sponsor-variant($primary, $success); }
+.button--sponsor-info { @include button-sponsor-variant($primary, $info); }
+.button--sponsor-warning { @include button-sponsor-variant($primary, $warning); }
+.button--sponsor-danger { @include button-sponsor-variant($primary, $danger); }
+
+.button--facebook { @include button-variant($text-color-inverse, $facebook); }
+.button--twitter { @include button-variant($text-color-inverse, $twitter); }
+.button--github { @include button-variant($text-color-inverse, $github); }
+.button--facebook,
+.button--twitter,
+.button--github {
+    padding: $button-padding-y;
+}
 
 .button--link {
     @include button-variant($link-color, transparent);

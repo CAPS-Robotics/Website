@@ -51,11 +51,17 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
         echo "
             <p>Want to learn more about FIRST? <a href=\"http://www.usfirst.org\">www.usfirst.org</a></p>
 
-            <h3 class=\"text-info\">Dates to know!</h3>
+            <h3 class=\"text-info\">A big thank you to our sponsors</h3>
             ";
         // line 19
-        $this->loadTemplate("includes/dates-to-know.html", "index.html", 19)->display($context);
+        $this->loadTemplate("includes/sponsors.html", "index.html", 19)->display($context);
         // line 20
+        echo "
+            <h3 class=\"text-info\">Dates to know!</h3>
+            ";
+        // line 22
+        $this->loadTemplate("includes/dates-to-know.html", "index.html", 22)->display($context);
+        // line 23
         echo "
 
         </div>
@@ -63,14 +69,35 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
         <div class=\"md-five columns pull-left\">
 
             ";
-        // line 26
-        $this->loadTemplate("includes/carousel.html", "index.html", 26)->display($context);
-        // line 27
-        echo "
-            ";
-        // line 28
-        $this->loadTemplate("includes/twitter.html", "index.html", 28)->display($context);
         // line 29
+        $this->loadTemplate("includes/carousel.html", "index.html", 29)->display($context);
+        // line 30
+        echo "
+            <div class=\"text-center margin-b\">
+                <a href=\"https://www.facebook.com/FRC2410\" class=\"button button--facebook\">
+                    <img src=\"";
+        // line 33
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/img/social/facebook.png\" alt=\"Facebook\" width=\"60\">
+                </a>
+                <a href=\"https://www.twitter.com/team2410\" class=\"button button--twitter\">
+                    <img src=\"";
+        // line 36
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/img/social/twitter.png\" alt=\"Twitter\" width=\"60\">
+                </a>
+                <a href=\"https://github.com/caps-robotics\" class=\"button button--github\">
+                    <img src=\"";
+        // line 39
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/img/social/github.png\" alt=\"Github\" width=\"60\">
+                </a>
+            </div>
+
+            ";
+        // line 43
+        $this->loadTemplate("includes/twitter.html", "index.html", 43)->display($context);
+        // line 44
         echo "
         </div>
 
@@ -91,7 +118,7 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
 
     public function getDebugInfo()
     {
-        return array (  74 => 29,  72 => 28,  69 => 27,  67 => 26,  59 => 20,  57 => 19,  51 => 15,  49 => 14,  43 => 11,  40 => 10,  38 => 9,  31 => 4,  28 => 3,  11 => 1,);
+        return array (  101 => 44,  99 => 43,  92 => 39,  86 => 36,  80 => 33,  75 => 30,  73 => 29,  65 => 23,  63 => 22,  59 => 20,  57 => 19,  51 => 15,  49 => 14,  43 => 11,  40 => 10,  38 => 9,  31 => 4,  28 => 3,  11 => 1,);
     }
 }
 /* {% extends "base/base.html" %}*/
@@ -111,6 +138,9 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
 /* */
 /*             <p>Want to learn more about FIRST? <a href="http://www.usfirst.org">www.usfirst.org</a></p>*/
 /* */
+/*             <h3 class="text-info">A big thank you to our sponsors</h3>*/
+/*             {% include "includes/sponsors.html" %}*/
+/* */
 /*             <h3 class="text-info">Dates to know!</h3>*/
 /*             {% include "includes/dates-to-know.html" %}*/
 /* */
@@ -120,6 +150,18 @@ class __TwigTemplate_dd1509b5b9557b84594ea84eed358acf7b910cbf49116a69647c87005c9
 /*         <div class="md-five columns pull-left">*/
 /* */
 /*             {% include "includes/carousel.html" %}*/
+/* */
+/*             <div class="text-center margin-b">*/
+/*                 <a href="https://www.facebook.com/FRC2410" class="button button--facebook">*/
+/*                     <img src="{{ baseUrl() }}/img/social/facebook.png" alt="Facebook" width="60">*/
+/*                 </a>*/
+/*                 <a href="https://www.twitter.com/team2410" class="button button--twitter">*/
+/*                     <img src="{{ baseUrl() }}/img/social/twitter.png" alt="Twitter" width="60">*/
+/*                 </a>*/
+/*                 <a href="https://github.com/caps-robotics" class="button button--github">*/
+/*                     <img src="{{ baseUrl() }}/img/social/github.png" alt="Github" width="60">*/
+/*                 </a>*/
+/*             </div>*/
 /* */
 /*             {% include "includes/twitter.html" %}*/
 /* */

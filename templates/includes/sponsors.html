@@ -1,0 +1,17 @@
+{% set sponsors = [
+    ['Blue Valley CAPS', 'http://www.bvcaps.org', 'success'],
+    ['BVEF', 'http://www.bvef.org', 'warning'],
+    ['Sprint', 'http://www.sprint.com', 'warning'],
+    ['General Motors', 'http://www.gm.com', 'default'],
+    ['Honeywell', 'http://www.honeywell.com', 'danger'],
+    ['Cerner', 'http://www.cerner.com', 'success'],
+    ['Ryerson', 'http://www.ryerson.com', 'primary']
+] %}
+
+<div class="margin-b text-center">
+
+    {% for sponsor in sponsors %}
+        <a href="{{ sponsor[1] }}" class="button button--sponsor-{{ sponsor[2] }}">{{ sponsor[0] }}</a>
+    {% endfor %}
+
+</div>
