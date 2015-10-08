@@ -19,16 +19,25 @@ class __TwigTemplate_8df522667a08e236ccd26c0d0f6dbbdba0889a51419c5bbb2a8ac257789
         echo "<div id=\"carousel\" class=\"carousel\">
     <div id=\"carousel-items\" class=\"carousel-items\">
         <div class=\"carousel-item\">
-            <img src=\"http://lorempixel.com/400/200/city\">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis similique harum eum enim unde repellat hic, laudantium cupiditate, excepturi nulla.</p>
+            <img src=\"";
+        // line 4
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/img/home/team.jpg\">
+            <p>Our team after the 2014 Greater Kansas City Regional. We won the Judges award and were looking forward to Oklahoma!</p>
         </div>
         <div class=\"carousel-item\">
-            <img src=\"http://lorempixel.com/400/200/sports\">
-            <p>Quia, fuga dolorum blanditiis odio iste, minima deserunt possimus illum, eum mollitia nobis nam ex optio, aut amet quidem doloremque.</p>
+            <img src=\"";
+        // line 8
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/img/home/caps.jpg\">
+            <p>The group of students within the CAPS program who worked on our 2015 Recycle Rush robot.</p>
         </div>
         <div class=\"carousel-item\">
-            <img src=\"http://lorempixel.com/400/200/food\">
-            <p>Qui similique commodi autem a, at, delectus dolores amet voluptatem quisquam quae aspernatur tempore veritatis dolorem eligendi et inventore cupiditate?</p>
+            <img src=\"";
+        // line 12
+        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
+        echo "/img/home/okc.jpg\">
+            <p>Our team after the 2014 Okalhoma City Regional!</p>
         </div>
     </div>
     <div id=\"carousel-controls\" class=\"carousel-controls\"></div>
@@ -58,22 +67,22 @@ var carousel = new Carousel(\"#carousel\");
 
     public function getDebugInfo()
     {
-        return array (  39 => 19,  19 => 1,);
+        return array (  48 => 19,  38 => 12,  31 => 8,  24 => 4,  19 => 1,);
     }
 }
 /* <div id="carousel" class="carousel">*/
 /*     <div id="carousel-items" class="carousel-items">*/
 /*         <div class="carousel-item">*/
-/*             <img src="http://lorempixel.com/400/200/city">*/
-/*             <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis similique harum eum enim unde repellat hic, laudantium cupiditate, excepturi nulla.</p>*/
+/*             <img src="{{ baseUrl() }}/img/home/team.jpg">*/
+/*             <p>Our team after the 2014 Greater Kansas City Regional. We won the Judges award and were looking forward to Oklahoma!</p>*/
 /*         </div>*/
 /*         <div class="carousel-item">*/
-/*             <img src="http://lorempixel.com/400/200/sports">*/
-/*             <p>Quia, fuga dolorum blanditiis odio iste, minima deserunt possimus illum, eum mollitia nobis nam ex optio, aut amet quidem doloremque.</p>*/
+/*             <img src="{{ baseUrl() }}/img/home/caps.jpg">*/
+/*             <p>The group of students within the CAPS program who worked on our 2015 Recycle Rush robot.</p>*/
 /*         </div>*/
 /*         <div class="carousel-item">*/
-/*             <img src="http://lorempixel.com/400/200/food">*/
-/*             <p>Qui similique commodi autem a, at, delectus dolores amet voluptatem quisquam quae aspernatur tempore veritatis dolorem eligendi et inventore cupiditate?</p>*/
+/*             <img src="{{ baseUrl() }}/img/home/okc.jpg">*/
+/*             <p>Our team after the 2014 Okalhoma City Regional!</p>*/
 /*         </div>*/
 /*     </div>*/
 /*     <div id="carousel-controls" class="carousel-controls"></div>*/

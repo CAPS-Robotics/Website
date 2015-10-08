@@ -65,13 +65,9 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
                 <li><a href=\"";
         // line 30
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
-        echo "/media\">Media</a></li>
-                <li><a href=\"";
-        // line 31
-        echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/robots\">Robots</a></li>
                 <li><a href=\"";
-        // line 32
+        // line 31
         echo twig_escape_filter($this->env, $this->env->getExtension('slim')->base(), "html", null, true);
         echo "/contact\">Contact</a></li>
             </ul>
@@ -81,9 +77,9 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
     <div class=\"container\">
 
         ";
-        // line 39
+        // line 38
         $this->displayBlock('content', $context, $blocks);
-        // line 40
+        // line 39
         echo "
     </div>
 
@@ -105,7 +101,7 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
     {
     }
 
-    // line 39
+    // line 38
     public function block_content($context, array $blocks = array())
     {
     }
@@ -122,7 +118,7 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 
     public function getDebugInfo()
     {
-        return array (  109 => 39,  104 => 21,  87 => 40,  85 => 39,  75 => 32,  71 => 31,  67 => 30,  63 => 29,  58 => 27,  51 => 22,  49 => 21,  44 => 19,  31 => 9,  21 => 1,);
+        return array (  105 => 38,  100 => 21,  83 => 39,  81 => 38,  71 => 31,  67 => 30,  63 => 29,  58 => 27,  51 => 22,  49 => 21,  44 => 19,  31 => 9,  21 => 1,);
     }
 }
 /* <!DOCTYPE html>*/
@@ -154,7 +150,6 @@ class __TwigTemplate_71e2c11a9febc80fd74c00dfdbb335a8c5eb9f3f931c66e06541f1bdc42
 /*             <a href="{{ baseUrl() }}" class="navbar-brand">2410</a>*/
 /*             <ul class="navbar-list">*/
 /*                 <li><a href="{{ baseUrl() }}">Home</a></li>*/
-/*                 <li><a href="{{ baseUrl() }}/media">Media</a></li>*/
 /*                 <li><a href="{{ baseUrl() }}/robots">Robots</a></li>*/
 /*                 <li><a href="{{ baseUrl() }}/contact">Contact</a></li>*/
 /*             </ul>*/
