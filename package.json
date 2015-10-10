@@ -1,50 +1,30 @@
 {
   "name": "mmr2410.com",
   "version": "1.0.0",
-  "description": "The homepage for FRC Team 2410 The Metal Mustangs",
-  "main": "index.js",
+  "description": "The homepage for FRC Team 2410, The Metal Mustangs",
+  "main": "gulpfile.js",
   "scripts": {
-    "test": "gulp build"
+    "test": "gulp test",
+    "build": "gulp build",
+    "watch": "gulp watch"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/caps-robotics/Website.git"
   },
   "author": "Dominic Tassio <dominic.tassio@gmail.com>",
-  "license": {
-    "type": "MIT",
-    "url": "https://github.com/caps-robotics/Website/blob/master/LICENSE.txt"
-  },
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/caps-robotics/Website/issues"
   },
   "homepage": "https://github.com/caps-robotics/Website#readme",
   "devDependencies": {
-    "apache-server-configs": "^2.14.0",
-    "archiver": "^0.14.4",
-    "del": "^1.2.0",
-    "glob": "^5.0.14",
     "gulp": "^3.9.0",
-    "gulp-autoprefixer": "^2.3.1",
-    "gulp-header": "^1.2.2",
-    "gulp-jscs": "^1.6.0",
-    "gulp-jshint": "^1.11.2",
-    "gulp-load-plugins": "^0.10.0",
-    "gulp-rename": "^1.2.2",
-    "gulp-replace": "^0.5.3",
-    "jquery": "^2.1.4",
-    "jshint-stylish": "^2.0.1",
-    "mocha": "^2.2.5",
-    "normalize.css": "^3.0.3",
-    "run-sequence": "^1.1.1"
-  },
-  "configs": {
-    "directories": {
-      "archive": "archive",
-      "dist": "dist",
-      "src": "src",
-      "test": "test"
-    }
-  },
-  "private": true
+    "gulp-sass": "^2.0.4",
+    "gulp-scss-lint": "^0.3.0",
+    "gulp-sourcemaps": "^1.5.2",
+    "gulp-tslint": "^3.2.0",
+    "gulp-typescript": "^2.9.0",
+    "gulp-util": "^3.0.6"
+  }
 }

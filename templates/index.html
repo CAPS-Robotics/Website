@@ -1,0 +1,49 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+    <div class="row">
+
+        <div class="md-seven columns pull-right">
+            <h3 class="text-info">Who are we?</h3>
+            {% include "includes/who-are-we.html" %}
+
+            <p>Questions? <a href="{{ baseUrl() }}/contact">Get in touch!</a> or email us at <a href="mailto:captain@mmr2410.com">captain@mmr2410.com</a></p>
+
+            <h3 class="text-info">What is FIRST?</h3>
+            {% include "includes/first.html" %}
+
+            <p>Want to learn more about FIRST? <a href="http://www.usfirst.org">www.usfirst.org</a></p>
+
+            <h3 class="text-info">A big thank you to our sponsors</h3>
+            {% include "includes/sponsors.html" %}
+
+            <h3 class="text-info">Dates to know!</h3>
+            {% include "includes/dates-to-know.html" %}
+
+
+        </div>
+
+        <div class="md-five columns pull-left">
+
+            {% include "includes/carousel.html" %}
+
+            <div class="text-center margin-b">
+                <a href="https://www.facebook.com/FRC2410" class="button button--facebook">
+                    <img src="{{ baseUrl() }}/img/social/facebook.png" alt="Facebook" width="60">
+                </a>
+                <a href="https://www.twitter.com/team2410" class="button button--twitter">
+                    <img src="{{ baseUrl() }}/img/social/twitter.png" alt="Twitter" width="60">
+                </a>
+                <a href="https://github.com/caps-robotics" class="button button--github">
+                    <img src="{{ baseUrl() }}/img/social/github.png" alt="Github" width="60">
+                </a>
+            </div>
+
+            {% include "includes/twitter.html" %}
+
+        </div>
+
+    </div>
+
+{% endblock %}

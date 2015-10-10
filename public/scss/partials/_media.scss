@@ -1,0 +1,42 @@
+@mixin media-object-variant($border-color) {
+    border-color: $border-color;
+}
+
+.media-object {
+    position: relative;
+    display: inline-block;
+    margin: $media-margin-y $media-margin-x;
+    color: $media-default-color;
+    vertical-align: middle;
+    background-color: $media-default-background;
+    border: 1px solid $media-default-color;
+    border-bottom-color: darken($media-default-color, 10%);
+    border-bottom-width: $media-border-width;
+
+    .media-object--image {
+        display: inline-block;
+
+        img {
+            width: $media-image-size;
+        }
+    }
+
+    .media-object--head {
+        display: inline-block;
+
+        a {
+            display: inline-block;
+            height: $media-image-size;
+            padding: 0 $media-margin-x;
+            line-height: $media-image-size;
+            vertical-align: middle;
+        }
+    }
+}
+
+.media-object--default { @include media-object-variant($grey-light); }
+.media-object--primary { @include media-object-variant($primary); }
+.media-object--success { @include media-object-variant($success); }
+.media-object--info { @include media-object-variant($info); }
+.media-object--warning { @include media-object-variant($warning); }
+.media-object--danger { @include media-object-variant($danger); }

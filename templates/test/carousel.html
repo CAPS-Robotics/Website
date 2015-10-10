@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Carousel</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="{{ baseUrl() }}/css/mmr.css">
+
+    <style>
+
+    body {
+        margin-top: 5.25em;
+    }
+
+    </style>
+
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="md-five columns">
+
+                <div id="carousel" class="carousel">
+                    <div id="carousel-items" class="carousel-items">
+                        <div class="carousel-item">
+                            <img src="http://lorempixel.com/400/200/city">
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facilis similique harum eum enim unde repellat hic, laudantium cupiditate, excepturi nulla.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="http://lorempixel.com/400/200/sports">
+                            <p>Quia, fuga dolorum blanditiis odio iste, minima deserunt possimus illum, eum mollitia nobis nam ex optio, aut amet quidem doloremque.</p>
+                        </div>
+                        <div class="carousel-item">
+                            <img src="http://lorempixel.com/400/200/food">
+                            <p>Qui similique commodi autem a, at, delectus dolores amet voluptatem quisquam quae aspernatur tempore veritatis dolorem eligendi et inventore cupiditate?</p>
+                        </div>
+                    </div>
+                    <div id="carousel-controls" class="carousel-controls"></div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <script src="{{ baseUrl() }}/js/jquery-1.11.3.min.js"></script>
+    <script src="{{ baseUrl() }}/js/carousel.js"></script>
+    <script>
+
+    var carousel = new Carousel("#carousel");
+
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,18 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+{% for i in 0..100 %}
+    <img data-src="http://lorempixel.com/640/480">
+{% endfor %}
+
+<script src="{{ baseUrl() }}/js/jquery.unveil.js"></script>
+<script>
+
+$(document).ready(function() {
+    $("img").unveil();
+});
+
+</script>
+
+{% endblock %}

@@ -1,170 +1,103 @@
-var fs = require('fs');
-var path = require('path');
+'use strict';
 
-var gulp = require('gulp');
+// +---------------------------------------------------------------------------+
+// | Dependencies                                                              |
+// +---------------------------------------------------------------------------+
 
-// Load all gulp plugins automatically
-// and attach them to the `plugins` object
-var plugins = require('gulp-load-plugins')();
+var gulp        = require('gulp');
+var sass        = require('gulp-sass');
+var scss_lint   = require('gulp-scss-lint');
+var typescript  = require('gulp-typescript');
+var tslint      = require('gulp-tslint');
+var sourcemaps  = require('gulp-sourcemaps');
+var gutil       = require('gulp-util');
 
-// Temporary solution until gulp 4
-// https://github.com/gulpjs/gulp/issues/355
-var runSequence = require('run-sequence');
+// +---------------------------------------------------------------------------+
+// | Variables                                                                 |
+// +---------------------------------------------------------------------------+
 
-var pkg = require('./package.json');
-var dirs = pkg.configs.directories;
+var sass_src    = 'public/scss/**/*.scss';
+var sass_dest   = 'public/css';
+var sass_lint   = 'public/scss/.scsslint.yml';
 
-// -----------------------------------------------------------------------------
-// | Helper Tasks                                                              |
-// -----------------------------------------------------------------------------
+var ts_src      = 'public/ts/**/*.ts';
+var ts_dest     = 'public/js';
+var ts_lint     = 'public/ts/tslint.json';
 
-gulp.task('archive:create_archive_dir', function() {
-    fs.mkdirSync(path.resolve(dirs.archive), '0755');
+// +---------------------------------------------------------------------------+
+// | Tasks                                                                     |
+// +---------------------------------------------------------------------------+
+
+/**
+ * Builds scss with sourcemaps
+ * src:     sass_src
+ * dest:    sass_dest
+ */
+gulp.task('sass:build', function() {
+    gulp.src(sass_src)
+        .pipe(sourcemaps.init())
+            .pipe(sass().on('error', sass.logError))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(sass_dest));
 });
 
-gulp.task('archive:zip', function(done) {
-
-    var archiveName = path.resolve(dirs.archive, pkg.name + '_v' + pkg.version + '.zip');
-    var archiver = require('archiver')('zip');
-    var files = require('glob').sync('**/*.*', {
-        'cwd': dirs.dist,
-        'dot': true // include hidden files
-    });
-    var output = fs.createWriteStream(archiveName);
-
-    archiver.on('error', function(error) {
-        done();
-        throw error;
-    });
-
-    output.on('close', done);
-
-    files.forEach(function(file) {
-
-        var filePath = path.resolve(dirs.dist, file);
-
-        // `archiver.bulk` does not maintain the file
-        // permissions, so we need to add files individually
-        archiver.append(fs.createReadStream(filePath), {
-            'name': file,
-            'mode': fs.statSync(filePath)
-        });
-
-    });
-
-    archiver.pipe(output);
-    archiver.finalize();
-
+/**
+ * Builds typescript with sourcemaps
+ * src:     ts_src
+ * dest:    ts_dest
+ */
+gulp.task('ts:build', function() {
+    gulp.src(ts_src)
+        .pipe(sourcemaps.init())
+            .pipe(typescript({}, "", typescript.reporter.defaultReporter()))
+        .pipe(sourcemaps.write())
+        .pipe(gulp.dest(ts_dest));
 });
 
-gulp.task('clean', function(done) {
-    require('del')([
-        dirs.archive,
-        dirs.dist
-    ], done);
+/**
+ * Lint scss
+ * src:     sass_src
+ * config:  sass_lint
+ */
+gulp.task('sass:lint', function() {
+    gulp.src(['!./public/scss/libraries/_normalize.scss', sass_src])
+        .pipe(scss_lint({
+            'config': sass_lint
+        }));
 });
 
-gulp.task('copy', [
-    'copy:.htaccess',
-    'copy:index.html',
-    'copy:jquery',
-    'copy:license',
-    'copy:main.css',
-    'copy:misc',
-    'copy:normalize'
-]);
-
-gulp.task('copy:.htaccess', function() {
-    return gulp.src('node_modules/apache-server-configs/dist/.htaccess')
-        .pipe(plugins.replace(/# ErrorDocument/g, 'ErrorDocument'))
-        .pipe(gulp.dest(dirs.dist));
+/**
+ * Lint typescript
+ * src:     ts_src
+ */
+gulp.task('ts:lint', function() {
+    gulp.src(ts_src)
+        .pipe(tslint().on('error', gutil.log))
+        .pipe(tslint.report('prose'));
 });
 
-gulp.task('copy:index.html', function() {
-    return gulp.src(dirs.src + '/inex.html')
-        .pipe(plugins.replace(/{{JQUERY_VERSION}}/g, pkg.devDependencies.jquery))
-        .pipe(gulp.dest(dirs.dist));
+/**
+ * Watch scss files and build/lint on change
+ * src:     sass_src
+ */
+gulp.task('sass:watch', function() {
+    gulp.watch(sass_src, ['sass:lint', 'sass:build']);
 });
 
-gulp.task('copy:jquery', function() {
-    return gulp.src(['node_modules/jquery/dist/jquery.min.js'])
-               .pipe(plugins.rename('jquery-' + pkg.devDependencies.jquery + '.min.js'))
-               .pipe(gulp.dest(dirs.dist + '/js/vendor'));
+/**
+ * Watch typescript files and build/lint on change
+ * src:     ts_src
+ */
+gulp.task('ts:watch', function() {
+    gulp.watch(ts_src, [/*'ts:lint', */'ts:build']);
 });
 
-gulp.task('copy:license', function() {
-    return gulp.src('LICENSE.txt')
-               .pipe(gulp.dest(dirs.dist));
-});
+// +---------------------------------------------------------------------------+
+// | Default Tasks                                                             |
+// +---------------------------------------------------------------------------+
 
-gulp.task('copy:main.css', function() {
+gulp.task('watch', ['sass:watch', 'ts:watch']);         // Watches all files and builds/lints.
+gulp.task('build', ['sass:build', 'ts:build']);         // Compiles all files.
+gulp.task('test', ['sass:lint'/*, 'ts:lint'*/]);            // Test/Lints all files.
 
-    var banner = '/*! FRC Team 2410 The Metal Mustangs v' + pkg.version +
-                    ' | ' + pkg.license.type + ' License' +
-                    ' | ' + pkg.homepage + ' */\n\n';
-
-    return gulp.src(dirs.src + '/css/main.css')
-               .pipe(plugins.header(banner))
-               .pipe(plugins.autoprefixer({
-                   browsers: ['last 2 versions', 'ie >= 8', '> 1%'],
-                   cascade: false
-               }))
-               .pipe(gulp.dest(dirs.dist + '/css'));
-});
-
-gulp.task('copy:misc', function() {
-    return gulp.src([
-
-        // Copy all files
-        dirs.src + '/**/*',
-
-        // Exclude the following files
-        // (other tasks will handle the copying of these files)
-        '!' + dirs.src + '/css/main.css',
-        '!' + dirs.src + '/index.html'
-
-    ], {
-
-        // Include hidden files by default
-        dot: true
-
-    }).pipe(gulp.dest(dirs.dist));
-});
-
-gulp.task('copy:normalize', function () {
-    return gulp.src('node_modules/normalize.css/normalize.css')
-               .pipe(gulp.dest(dirs.dist + '/css'));
-});
-
-gulp.task('lint:js', function () {
-    return gulp.src([
-        'gulpfile.js',
-        dirs.src + '/js/*.js',
-        dirs.test + '/*.js'
-    ]).pipe(plugins.jscs())
-      .pipe(plugins.jshint())
-      .pipe(plugins.jshint.reporter('jshint-stylish'))
-      .pipe(plugins.jshint.reporter('fail'));
-});
-
-
-// -----------------------------------------------------------------------------
-// | Main Tasks                                                                |
-// -----------------------------------------------------------------------------
-
-gulp.task('archive', function(done) {
-    runSequence(
-        'build',
-        'archive:create_archive_dir',
-        'archive:zip',
-    done);
-});
-
-gulp.task('build', function(done) {
-    runSequence(
-        ['clean', 'lint:js'],
-        'copy',
-    done);
-});
-
-gulp.task('default', ['build']);
+gulp.task('default', ['test', 'build', 'watch']);       // Default it to watch,

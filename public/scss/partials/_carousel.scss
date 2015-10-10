@@ -1,0 +1,51 @@
+.carousel {
+    overflow: hidden;
+
+    &-item {
+        top: 0;
+        width: 100%;
+        height: 24em;
+        transition: left 1s ease;
+    }
+
+    &-hidden {
+        display: none;
+    }
+
+    &-control {
+        display: inline-block;
+        width: 1em;
+        height: 1em;
+        margin: 0 1em;
+        cursor: pointer;
+        border: 2px solid $grey;
+        border-radius: 1em;
+        transition: background-color 1s ease,
+                    border-color 1s ease;
+
+        &:hover {
+            border-color: $primary;
+        }
+    }
+
+    &-controls {
+        margin: 0 auto;
+        margin-bottom: 1em;
+        text-align: center;
+    }
+
+    img {
+        display: block;
+        width: 100%;
+    }
+
+    p {
+        padding: 0 1em;
+        text-indent: 0;
+    }
+
+    &-control--active {
+        background-color: $primary;
+        border-color: $primary;
+    }
+}

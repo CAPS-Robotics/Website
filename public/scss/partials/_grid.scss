@@ -1,0 +1,88 @@
+@mixin grid-variant($prefix) {
+    .#{$prefix}-one.column,
+    .#{$prefix}-one.columns { width: percentage(1 / 12); }
+    .#{$prefix}-two.column,
+    .#{$prefix}-two.columns { width: percentage(2 / 12); }
+    .#{$prefix}-three.column,
+    .#{$prefix}-three.columns { width: percentage(3 / 12); }
+    .#{$prefix}-four.column,
+    .#{$prefix}-four.columns { width: percentage(4 / 12); }
+    .#{$prefix}-five.column,
+    .#{$prefix}-five.columns { width: percentage(5 / 12); }
+    .#{$prefix}-six.column,
+    .#{$prefix}-six.columns { width: percentage(6 / 12); }
+    .#{$prefix}-seven.column,
+    .#{$prefix}-seven.columns { width: percentage(7 / 12); }
+    .#{$prefix}-eight.column,
+    .#{$prefix}-eight.columns { width: percentage(8 / 12); }
+    .#{$prefix}-nine.column,
+    .#{$prefix}-nine.columns { width: percentage(9 / 12); }
+    .#{$prefix}-ten.column,
+    .#{$prefix}-ten.columns { width: percentage(10 / 12); }
+    .#{$prefix}-eleven.column,
+    .#{$prefix}-eleven.columns { width: percentage(11 / 12); }
+    .#{$prefix}-twelve.column,
+    .#{$prefix}-twelve.columns { width: percentage(12 / 12); }
+
+    .#{prefix}-by-one.column,
+    .#{prefix}-by-one.columns { margin-left: percentage(1 / 12); }
+    .#{prefix}-by-two.column,
+    .#{prefix}-by-two.columns { margin-left: percentage(2 / 12); }
+    .#{prefix}-by-three.column,
+    .#{prefix}-by-three.columns { margin-left: percentage(3 / 12); }
+    .#{prefix}-by-four.column,
+    .#{prefix}-by-four.columns { margin-left: percentage(4 / 12); }
+    .#{prefix}-by-five.column,
+    .#{prefix}-by-five.columns { margin-left: percentage(5 / 12); }
+    .#{prefix}-by-six.column,
+    .#{prefix}-by-six.columns { margin-left: percentage(6 / 12); }
+    .#{prefix}-by-seven.column,
+    .#{prefix}-by-seven.columns { margin-left: percentage(7 / 12); }
+    .#{prefix}-by-eight.column,
+    .#{prefix}-by-eight.columns { margin-left: percentage(8 / 12); }
+    .#{prefix}-by-nine.column,
+    .#{prefix}-by-nine.columns { margin-left: percentage(9 / 12); }
+    .#{prefix}-by-ten.column,
+    .#{prefix}-by-ten.columns { margin-left: percentage(10 / 12); }
+    .#{prefix}-by-eleven.column,
+    .#{prefix}-by-eleven.columns { margin-left: percentage(11 / 12); }
+    .#{prefix}-by-twelve.column,
+    .#{prefix}-by-twelve.columns { margin-left: percentage(12 / 12); }
+}
+
+.container {
+    position: relative;
+    width: 100%;
+    padding: 0 20px;
+    margin: 0 auto;
+
+    @each $breakpoint, $container-max-width in $container-max-widths {
+        @include media-breakpoint-up($breakpoint) {
+            max-width: $container-max-width;
+        }
+    }
+}
+
+.row {
+    margin: 0 -20px;
+}
+
+.column,
+.columns {
+    position: relative;
+    float: left;
+    width: 100%;
+    min-height: 1px;
+    padding: $column-padding;
+}
+
+// @include grid-variant("xs");
+
+// @include media-breakpoint-up(sm) { @include grid-variant("sm"); }
+// @include media-breakpoint-up(md) { @include grid-variant("md"); }
+// @include media-breakpoint-up(lg) { @include grid-variant("lg"); }
+// @include media-breakpoint-up(xl) { @include grid-variant("xl"); }
+
+@each $breakpoint in map-keys($grid-breakpoints) {
+    @include media-breakpoint-up($breakpoint) { @include grid-variant($breakpoint); }
+}
