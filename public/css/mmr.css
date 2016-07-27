@@ -1141,6 +1141,7 @@ address {
     top: 0;
     width: 100%;
     height: 24em;
+    text-align: center;
     transition: left 1s ease; }
   .carousel-hidden {
     display: none; }
@@ -1171,6 +1172,7 @@ address {
 
 .robot {
   height: 46em;
+  text-align: center;
   margin-bottom: 1em; }
 
 .media-object {
