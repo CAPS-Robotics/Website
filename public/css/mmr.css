@@ -223,6 +223,8 @@ a {
   a:hover {
     color: #007d93;
     text-decoration: underline; }
+  a.social-icon:hover {
+    text-decoration: none; }
 
 .hidden-xs-above {
   display: none !important; }

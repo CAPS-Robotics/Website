@@ -20,4 +20,8 @@ a {
         color: darken($link-color, 10%);
         text-decoration: underline;
     }
+
+    &.social-icon:hover {
+        text-decoration: none;
+    }
 }
