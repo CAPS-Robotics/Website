@@ -1059,7 +1059,7 @@ address {
   .button--github .active, .button--github:active {
     background-color: #262626; }
 
-.button--facebook,
+.button--facebook
 .button--twitter,
 .button--github {
   padding: 0.5em; }
@@ -1069,8 +1069,7 @@ address {
   background-color: transparent;
   border-bottom-color: rgba(0, 0, 0, 0); }
   .button--link:hover {
-    color: #002188; }
-  .button--link .active, .button--link:active {
+    color: #002188; }  .button--link .active, .button--link:active {
     background-color: rgba(0, 0, 0, 0); }
   .button--link:hover {
     color: #001555; }
@@ -1118,16 +1117,15 @@ address {
       background-color: lightgray; }
   .navbar--default .navbar-list .active {
     background-color: lightgray; }
-
 .navbar--primary {
-  background-color: #002188;
-  border-bottom-color: #001555; }
+  background-color: #0049bf;
+  border-bottom-color: #001e4f; }
   .navbar--primary .navbar-brand {
     color: #fff; }
   .navbar--primary .navbar-list:before {
     color: #fff; }
   .navbar--primary .navbar-list li > a {
-    color: #fff; }
+    color: #fff; 
     .navbar--primary .navbar-list li > a:hover {
       background-color: #001b6f; }
   .navbar--primary .navbar-list .active {
