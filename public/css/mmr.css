@@ -989,7 +989,10 @@ address {
     transform: none; }
 
 .navbar {
-  border-bottom: 0.25em solid transparent; }
+  border-bottom: 0.25em solid transparent; 
+  margin: 0;
+  padding: 0;
+}
 
 .navbar-brand {
   display: inline-block;
@@ -1002,11 +1005,10 @@ address {
   text-transform: uppercase; }
 
 .navbar-list {
-    margin: 0 auto;
-    width: -webkit-fit-content;
-       width: -moz-fit-content;
-            width: fit-content;
-  list-style: none; 
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none; 
 }
   .navbar-list li {
     display: inline; 
@@ -1108,7 +1110,10 @@ address {
   top: 0;
   left: 0;
   z-index: 99;
-  width: 100%; }
+  width: 100%; 
+  margin: 0;
+  padding: 0;
+}
 
 @media (max-width: 47.9em) {
   .navbar-list {
