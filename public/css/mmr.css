@@ -8,7 +8,7 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
 
 html {
-  font-family: 'Roboto Condensed';
+  font-family: sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
@@ -218,7 +218,7 @@ html {
   font-size: 62.5%; }
 
 body {
-  font-family: "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Condensed', "Raleway", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-size: 1.5em;
   font-weight: 400;
   line-height: 1.6;
