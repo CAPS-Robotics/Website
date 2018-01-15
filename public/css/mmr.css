@@ -4,8 +4,11 @@
  * Licensed under MIT (https://github.com/caps-robotics/Website/blob/rewrite/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
 html {
-  font-family: sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%; }
 
