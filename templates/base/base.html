@@ -10,7 +10,7 @@
 	<link href="{{ baseUrl() }}/css/ladda-themeless.min.css" rel="stylesheet">
 	<link href="{{ baseUrl() }}/css/theme.css" rel="stylesheet">
 
-	<script src="{{ baseUrl() }}/js/zepto.min.js"></script>
+	<script src="{{ baseUrl() }}/js/jquery-1.11.0.min.js"></script>
 
 	{% block customHead %}{% endblock %}
 </head>
@@ -19,6 +19,11 @@
 <div class="navbar navbar-default navbar-fixed-top">
 	<div class="container">
 		<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
 			<a class="navbar-brand" href="{{ baseUrl() }}">Metal Mustangs <span class="label label-primary">2410</span></a>
 		</div>
 		<div class="collapse navbar-collapse">
@@ -33,6 +38,8 @@
 		</div>
 	</div>
 </div>
+
+<script src="{{ baseUrl() }}/js/bootstrap.min.js"></script>
 
 <!-- Old Nav
 
