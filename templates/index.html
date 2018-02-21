@@ -2,94 +2,126 @@
 
 {% block content %}
 
-	<div class="row">
-		<div style="width:80%;margin: 0 auto;">
+<div style="width:80%;margin: 0 auto;">
 
-			<!--<h1 style="text-align: center;" class="text-info">FRC Team 2410: The Metal Mustangs</h1>-->
-			{% include "includes/carousel.html" %}
-
-			<div style="text-align: center;background-color:#fafafa; padding: 30px;">
-				<a href="https://www.youtube.com/channel/UC8DLmHp7w6I7lVIN9SX80wA" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/youtube.png" alt="YouTube" width="10%">
-				</a>
-				<a href="https://www.facebook.com/FRC2410" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/facebook.png" alt="Facebook" width="10%">
-				</a>
-				<a href="https://www.twitter.com/team2410" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/twitter.png" alt="Twitter" width="10%">
-				</a>
-				<a href="https://instagram.com/metalmustangrobotics" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/instagram.png" alt="Instagram" width="10%">
-				</a>
-				<a href="https://github.com/caps-robotics" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/github.png" alt="Github" width="10%">
-				</a>
-			</div>
-
-			<div class="jumbotron">
-				<h1>Meeting Schedule</h1>
-				{%  include "includes/meeting-schedule.html" %}
-			</div>
-
-			<div class="jumbotron">
-				<h1>Who We Are</h1>
-				{% include "includes/who-are-we.html" %}
-			</div>
-
-			<div class="jumbotron">
-				<h1>Dates To Know</h1>
-				{% include "includes/dates-to-know.html" %}
-			</div>
-
-			<div class="jumbotron">
-				<h1>Chairman's Video 2018</h1>
-				<p>This video was submitted for the Chairman's Award, the highest honor given to FIRST Robotics Competition Teams, recognizing a team that best represents a model for other teams to emulate and best embodies the purpose and goals of FIRST.</p>
-				<div class="fluidMedia">
-					<iframe src="https://www.youtube.com/embed/vMXlaZ94fYM" frameborder="0" allowfullscreen></iframe>
+	<!--<h1 style="text-align: center;" class="text-info">FRC Team 2410: The Metal Mustangs</h1>-->
+	<div>
+		<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+			<ol class="carousel-indicators">
+				<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="3"></li>
+				<li data-target="#carouselExampleIndicators" data-slide-to="4"></li>
+			</ol>
+			<div class="carousel-inner">
+				<div class="carousel-item active">
+					<img class="d-block w-100" src="{{ baseUrl() }}/img/home/IMG_1431.JPG" alt="First slide">
 				</div>
-
-				<p>Questions? <a href="{{ baseUrl() }}/contact">Get in touch!</a> or email us at <a href="mailto:captain@mmr2410.com">captain@mmr2410.com</a>.</p>
-			</div>
-            
-            <div class="jumbotron">
-				<h1>2017 Season Highlights</h1>
-				<p>Look back at the best parts of FIRST Steamworks!</p>
-				<div class="fluidMedia">
-					<iframe src="https://www.youtube.com/embed/AEQsn0FmuHQ" frameborder="0" allowfullscreen></iframe>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="{{ baseUrl() }}/img/home/IMG_1433.JPG" alt="Second slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="{{ baseUrl() }}/img/home/IMG_1436.JPG" alt="Third slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="{{ baseUrl() }}/img/home/IMG_1435.JPG" alt="4 slide">
+				</div>
+				<div class="carousel-item">
+					<img class="d-block w-100" src="{{ baseUrl() }}/img/home/IMG_1439.JPG" alt="5 slide">
 				</div>
 			</div>
+				<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+					<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+					<span class="sr-only">Previous</span>
+				</a>
+				<a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+					<span class="carousel-control-next-icon" aria-hidden="true"></span>
+					<span class="sr-only">Next</span>
+				</a>
+		</div>
+	</div>
+	<br>
+	<div style="text-align: center;background-color:#fafafa; padding: 30px;">
+		<a href="https://www.youtube.com/channel/UC8DLmHp7w6I7lVIN9SX80wA" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/youtube.png" alt="YouTube" width="10%">
+		</a>
+		<a href="https://www.facebook.com/FRC2410" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/facebook.png" alt="Facebook" width="10%">
+		</a>
+		<a href="https://www.twitter.com/team2410" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/twitter.png" alt="Twitter" width="10%">
+		</a>
+		<a href="https://instagram.com/metalmustangrobotics" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/instagram.png" alt="Instagram" width="10%">
+		</a>
+		<a href="https://github.com/caps-robotics" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/github.png" alt="Github" width="10%">
+		</a>
+	</div>
 
-			<div class="jumbotron">
-				<h1>What is FIRST?</h1>
-				{% include "includes/first.html" %}
+	<div class="jumbotron">
+		<h1>Meeting Schedule</h1>
+		{%  include "includes/meeting-schedule.html" %}
+	</div>
 
-				<p>Want to learn more about FIRST? <a href="http://www.firstinspires.org">www.firstinspires.org</a>.</p>
-			</div>
+	<div class="jumbotron">
+		<h1>Who We Are</h1>
+		{% include "includes/who-are-we.html" %}
+	</div>
 
-			<div class="jumbotron">
-				<h1>Sponsors</h1>
-				<a href="https://www.bvcaps.org" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/caps.png" alt="Blue Valley CAPS" width="20%">
-				</a>
-				<a href="https://www.gm.com" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/GM.png" alt="General Motors" width="15%">
-				</a>
-				<a href="https://www.ryerson.com" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/ryerson.png" alt="Ryerson" width="20%">
-				</a>
-				<br>
-				<a href="https://www.hantover.com" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/Hantover.png" alt="Hantover" width="30%">
-				</a>
-				<a href="https://www.huhtamaki.com" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/huhtamaki.jpg" alt="Huhtamaki" width="30%">
-				</a>
-				<a href="https://www.uhc.com" class="social-icon">
-					<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/uhc.jpg" alt="United Healthcare" width="30%">
-				</a>
-			</div>
+	<div class="jumbotron">
+		<h1>Dates To Know</h1>
+		{% include "includes/dates-to-know.html" %}
+	</div>
+
+	<div class="jumbotron">
+		<h1>Chairman's Video 2018</h1>
+		<p>This video was submitted for the Chairman's Award, the highest honor given to FIRST Robotics Competition Teams, recognizing a team that best represents a model for other teams to emulate and best embodies the purpose and goals of FIRST.</p>
+		<div class="fluidMedia">
+			<iframe src="https://www.youtube.com/embed/vMXlaZ94fYM" frameborder="0" allowfullscreen></iframe>
 		</div>
 
+		<p>Questions? <a href="{{ baseUrl() }}/contact">Get in touch!</a> or email us at <a href="mailto:captain@mmr2410.com">captain@mmr2410.com</a>.</p>
 	</div>
+		
+		<div class="jumbotron">
+		<h1>2017 Season Highlights</h1>
+		<p>Look back at the best parts of FIRST Steamworks!</p>
+		<div class="fluidMedia">
+			<iframe src="https://www.youtube.com/embed/AEQsn0FmuHQ" frameborder="0" allowfullscreen></iframe>
+		</div>
+	</div>
+
+	<div class="jumbotron">
+		<h1>What is FIRST?</h1>
+		{% include "includes/first.html" %}
+
+		<p>Want to learn more about FIRST? <a href="http://www.firstinspires.org">www.firstinspires.org</a>.</p>
+	</div>
+
+	<div class="jumbotron">
+		<h1>Sponsors</h1>
+		<a href="https://www.bvcaps.org" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/caps.png" alt="Blue Valley CAPS" width="20%">
+		</a>
+		<a href="https://www.gm.com" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/GM.png" alt="General Motors" width="15%">
+		</a>
+		<a href="https://www.ryerson.com" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/ryerson.png" alt="Ryerson" width="20%">
+		</a>
+		<br>
+		<a href="https://www.hantover.com" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/Hantover.png" alt="Hantover" width="30%">
+		</a>
+		<a href="https://www.huhtamaki.com" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/huhtamaki.jpg" alt="Huhtamaki" width="30%">
+		</a>
+		<a href="https://www.uhc.com" class="social-icon">
+			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/sponsors/uhc.jpg" alt="United Healthcare" width="30%">
+		</a>
+	</div>
+</div>
 
 {% endblock %}

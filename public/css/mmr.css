@@ -7,6 +7,7 @@
 body::-webkit-scrollbar {
  display: none;
 }
+/*
 .carousel {
     overflow: hidden; }
 .carousel-item {
@@ -51,7 +52,7 @@ body::-webkit-scrollbar {
 }
 .carousel-control--active {
     background-color: #00a8c6;
-    border-color: #00a8c6; }
+    border-color: #00a8c6; } */
 
 .fluidMedia {
     position: relative;
