@@ -4,9 +4,6 @@
  * Licensed under MIT (https://github.com/caps-robotics/Website/blob/rewrite/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-body::-webkit-scrollbar {
- //display: none;
-}
 .carousel {
   position: relative;
 }
