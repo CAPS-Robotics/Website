@@ -4,18 +4,7 @@
  * Licensed under MIT (https://github.com/caps-robotics/Website/blob/rewrite/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
-body::-webkit-scrollbar {
-  width: 10px;
-}
-::-webkit-scrollbar-track {
-    background: #24282E; 
-}
-::-webkit-scrollbar-thumb {
-    background: #999; 
-}
-::-webkit-scrollbar-thumb:hover {
-    background: #999; 
-}
+
 .carousel {
   position: relative;
 }
