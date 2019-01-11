@@ -1,8 +1,6 @@
-# Slim Framework Skeleton Application
+# Website for FRC Team 2410
 
-Use this skeleton application to quickly setup and start working on a new Slim Framework application. This application uses the latest Slim and Slim-Views repositories. It also uses Sensio Labs' [Twig](http://twig.sensiolabs.org) template library.
-
-This skeleton application was built for Composer. This makes setting up a new Slim Framework application quick and easy.
+Built using slim. Steps to set up slim for local hosting are below.
 
 ## Install Composer
 
