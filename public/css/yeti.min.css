@@ -4001,7 +4001,7 @@ a.list-group-item.active>.badge,.nav-pills>.active>a>.badge{
 }
 .jumbotron{
     padding:30px;
-    margin-bottom:30px;
+    /*margin-bottom:30px;*/
     font-size:23px;
     font-weight:200;
     line-height:2.1428571435;
