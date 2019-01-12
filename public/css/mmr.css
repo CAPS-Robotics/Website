@@ -235,3 +235,16 @@
 a.social-icon:hover {
     text-decoration: none;
 }
+
+.profile {
+  padding: 30px;
+  margin-top: 30px;
+  background-color: white;
+  text-align: center;
+}
+
+.profile img {
+  width: 100%;
+}
+
+
