@@ -45,3 +45,9 @@ node_modules
 *.css.map
 
 templates/cache/
+.idea/encodings.xml
+.idea/misc.xml
+.idea/modules.xml
+.idea/vcs.xml
+.idea/Website.iml
+.idea/workspace.xml
