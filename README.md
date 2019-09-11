@@ -2,7 +2,9 @@
 
 mmr2410.com
 
-Built using slim. Steps to set up slim for local hosting are below.
+Built using slim. Steps to set up slim for local hosting are below.# Website for FRC Team 2410
+
+If this website has issues, contact Rajin Nagpal.
 
 ## Install Composer
 
