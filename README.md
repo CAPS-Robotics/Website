@@ -1,8 +1,6 @@
-# Website for FRC Team 2410
+# Website for First Robotics Competition Team 2410
 
-mmr2410.com
-
-Built using slim. Steps to set up slim for local hosting are below.
+Built using SLIM. Steps to set up SLIM for local hosting are below.
 
 <b>If this website has issues, contact Rajin Nagpal.</b>
 
