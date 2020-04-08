@@ -1,4 +1,4 @@
-# Website for First Robotics Competition Team 2410
+# Website for FIRST Robotics Competition Team 2410
 
 Built using SLIM. Steps to set up SLIM for local hosting are below.
 
