@@ -3,11 +3,11 @@
 {% block content %}
 
 <div style="width:80%;margin: 0 auto;">
-
+<br>
 	<!--<h1 style="text-align: center;" class="text-info">FRC Team 2410: The Metal Mustangs</h1>-->
 	{% include "includes/carousel.html" %}
 	
-	<div style="text-align: center;background-color:#fafafa; padding: 30px;">
+	<div style="text-align: center;background-color:hsl(0, 0%, 100%); padding: 30px;">
 		<a href="https://www.youtube.com/channel/UC8DLmHp7w6I7lVIN9SX80wA" class="social-icon">
 			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/youtube.png" alt="YouTube" width="10%">
 		</a>
@@ -24,22 +24,22 @@
 			<img style="margin: 0em .5em;" src="{{ baseUrl() }}/img/social/github.png" alt="Github" width="10%">
 		</a>
 	</div>
-    
+
 	<div class="jumbotron">
 		<h1>Interested in Robotics?</h1>
 		<p>We are currently open for recruitment for the 2020-21 season, if you are interested please fill out the Google form <a href="https://forms.gle/ksHDXzk16FWhRebdA"target="_blank">here</a> for more information to our recruitment meeting on May 12th at 6pm.</p>
 	</div>
+   
+	<div class="jumbotron">
+		<h1>Who We Are</h1>
+		{% include "includes/who-are-we.html" %}
+	</div>
 
-    	<div class="jumbotron">
+    <div class="jumbotron">
 		<h1>What is FIRST?</h1>
 		{% include "includes/first.html" %}
 
 		<p>Want to learn more about FIRST? <a href="http://www.firstinspires.org">www.firstinspires.org</a>.</p>
-	</div>
-    
-    <div class="jumbotron">
-		<h1>Who We Are</h1>
-		{% include "includes/who-are-we.html" %}
 	</div>
     
 	<div class="jumbotron">
@@ -50,14 +50,6 @@
 	<div class="jumbotron">
 		<h1>Dates To Know</h1>
 		{% include "includes/dates-to-know.html" %}
-	</div>
-
-	<div class="jumbotron">
-		<h1>Chairman's Video 2020</h1>
-		<p>This video was submitted for the Chairman's Award, the highest honor given to FIRST Robotics Competition Teams, recognizing a team that best represents a model for other teams to emulate and best embodies the purpose and goals of FIRST.</p>
-		<div class="fluidMedia">
-			<iframe src="https://www.youtube.com/embed/Hd0g2p3IW7w" frameborder="0" allowfullscreen></iframe>
-		</div>
 	</div>
 
     <div class="jumbotron">
