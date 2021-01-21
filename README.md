@@ -2,7 +2,7 @@
 
 Built using SLIM. Steps to set up SLIM for local hosting are below.
 
-<b>If this website has issues, contact Rajin Nagpal.</b>
+<b>If this website has issues, contact Uri Reem (Discord: AlsoPhant0m#4445).</b>
 
 ## Download PHP
 
@@ -21,3 +21,9 @@ Run `composer install` in the root of the repository
 ## Host the site
 
 Run `php -S localhost:8000` in the `public/` directory
+
+## Commit and push
+
+git add .
+git commit -m "message_name"
+git push
