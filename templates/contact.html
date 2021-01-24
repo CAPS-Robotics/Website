@@ -1,0 +1,71 @@
+{% extends "base/base.html" %}
+
+{% block customHead %}
+
+	<style>
+
+		.button {
+			min-width: 9em;
+		}
+
+	</style>
+
+{% endblock %}
+
+{% block content %}
+
+	<div class="jumbotron">
+		<!-- <img src="https://maps.googleapis.com/maps/api/staticmap?center=7501 W 149th Terrace, Overland Park, KS 66223&maptype=roadmap&size=560x280&markers=7501 W 149th Terrace, Overland Park, KS 66223" alt="Google Maps, Center for Advanced Profession Studies, 7501 W 149th Terrace, Overland Park, KS 66223" width="100%"> -->
+		<div style="width: 80%;margin: 0 auto;" class="fluidMedia">
+			<iframe
+				frameborder="0" style="border:0"
+				src="https://www.google.com/maps/embed/v1/place?key=AIzaSyBtZcEJelwjt3NONfMg3nmicSarshY0I5o&q=7501+W+149th+Terrace,Overland+Park+KS" allowfullscreen="true">
+			</iframe>
+		</div>
+		<address class="padding">
+			<b>Center for Advanced Professional Studies</b><br>
+			7501 West 149th Terrace<br>
+			Overland Park, KS<br>
+			Phone: +1 (913) 239-5900
+		</address>
+	</div>
+	<div class="jumbotron">
+		<h1>People Of Interest</h1>
+
+		<address>
+			<b>Lucy Pudvan</b><br>
+			Head Mentor<br>
+			Email: <a href="mailto:bvcapsrobotics@gmail.com">bvcapsrobotics@gmail.com</a>
+		</address>
+
+		<address>
+			<b>PR and Outreach</b><br>
+			Email: <a href="mailto:pr@mmr2410.com">
+			pr@mmr2410.com</a>
+		</address>
+	</div>
+	<div class="jumbotron">
+		<h1>Social Media</h1>
+		<a href="https://www.youtube.com/channel/UC8DLmHp7w6I7lVIN9SX80wA"target="_blank" class="social-icon">
+			<img style="margin: 1em 0em;" src="{{ baseUrl() }}/img/social/youtube.png" alt="YouTube" width="10%">
+		</a>
+		<a href="https://www.facebook.com/FRC2410"target="_blank" class="social-icon">
+			<img style="margin: 1em 0em;" src="{{ baseUrl() }}/img/social/facebook.png" alt="Facebook" width="10%">
+		</a>
+		<a href="https://www.twitter.com/team2410"target="_blank" class="social-icon">
+			<img style="margin: 1em 0em;" src="{{ baseUrl() }}/img/social/twitter.png" alt="Twitter" width="10%">
+		</a>
+		<a href="https://instagram.com/metalmustangrobotics"target="_blank" class="social-icon">
+			<img style="margin: 1em 0em;" src="{{ baseUrl() }}/img/social/instagram.png" alt="Instagram" width="10%">
+		</a>
+		<a href="https://github.com/caps-robotics"target="_blank" class="social-icon">
+			<img style="margin: 1em 0em;" src="{{ baseUrl() }}/img/social/github.png" alt="Github" width="10%">
+		</a>
+	</div>
+
+    <div class="jumbotron">
+        <h1>Sponsors</h1>
+        {% include "includes/sponsors.html" %}
+    </div>
+
+{% endblock %}

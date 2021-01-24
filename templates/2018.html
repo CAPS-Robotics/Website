@@ -1,0 +1,70 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+	<div class="jumbotron" style="text-align: left;">
+		<h1><b>Big Jake</b></h1>
+		<h2><a href="http://thebluealliance.com/team/2410">Our Blue Alliance Page</a></h2>
+		<img src="{{ baseUrl() }}/img/robot/bigjake2.jpg" style="max-width: 100%;">
+
+		<br>
+		<br>
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Swerve Drive</b><br></h2>
+		</div>
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Speed</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>14 feet per second</small></h2>
+		</div>
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Autonomous</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>Center: Can deliever to either switch side</small></h2>
+			<h2 style="padding:0;margin:0"><small>Side: Can cross baseline. Scale in development</small></h2>
+		</div>
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Scale</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>Can deliver to all scale positions</small></h2>
+			<h2 style="padding:0;margin:0"><small>3 seconds to get to top scale position</small></h2>
+		</div>
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Climbing</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>5 second climb</small></h2>
+			<h2 style="padding:0;margin:0"><small>Can hook onto very edge of bar</small></h2>
+		</div>
+		<br style="clear:both;"/>
+
+	</div>
+	<div class="jumbotron">
+		<h1>Results</h1>
+
+		<br>
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Heartland Regional</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>Rank: 36th</small></h2>
+			<h2 style="padding:0;margin:0"><small>Record: 7-9-0</small></h2>
+			<h2 style="padding:0;margin:0"><small>Team Spirit Award</small></h2>
+		</div>
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Iowa Regional</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>Rank: 1st</small></h2>
+			<h2 style="padding:0;margin:0"><small>Semifinalist</small></h2>
+		</div>
+		<br style="clear:both;"/>
+	</div>
+
+    <div class="jumbotron">
+        <h1>Sponsors</h1>
+	    {% include "includes/sponsors.html" %}
+    </div>
+
+{% endblock %}

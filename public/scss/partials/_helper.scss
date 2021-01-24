@@ -1,0 +1,36 @@
+@each $breakpoint in map-keys($grid-breakpoints) {
+    .hidden-#{$breakpoint}-above {
+        @include media-breakpoint-up($breakpoint) {
+            display: none !important;
+        }
+    }
+    .hidden-#{$breakpoint}-below {
+        @include media-breakpoint-down($breakpoint) {
+            display: none !important;
+        }
+    }
+}
+
+.text-indent { text-indent: $text-indent; }
+.text-no-indent { text-indent: 0; }
+
+.text-center { text-align: center; }
+
+.text-primary { color: $primary; }
+.text-success { color: $success; }
+.text-info { color: $info; }
+.text-warning { color: $warning; }
+.text-danger { color: $danger; }
+
+.padding { padding: 1em; }
+.padding-lr { padding: 0 1em; }
+.padding-tb { padding: 1em 0; }
+.padding-b { padding-bottom: 1em; }
+
+.margin { margin: 1em; }
+.margin-lr { margin: 0 1em; }
+.margin-tb { margin: 1em 0; }
+.margin-b { margin-bottom: 1em; }
+
+.pull-left { float: left !important; }
+.pull-right { float: right !important; }

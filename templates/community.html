@@ -1,0 +1,20 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+	<div class="row">
+        {% include "includes/outreach-carousel.html" %}
+
+        <div class="jumbotron">
+            <h1>More than just robots</h1>
+            <p>Every year we hold a robotics tournament for elementary and middle school-aged students. A unique aspect to this tournament is the First Lego League Ladies Luncheon, or FLLLL. Girls on these younger teams participate, listening to a guest speaker to inspire a role model in a STEM career. Team members also mentor younger robotics teams. We host booths at major Kansas City events, such as NASCAR, Sporting KC, and the Maker Faire to inspire engineering, science, and innovation, and to make connections throughout the metro area. We also hold app camps over the summer to teach students programming skills.</p>
+            <p>Team 2410 hosts various groups in the CAPS facility. We give tours, demos, and provide activities geared toward engaging youth in STEM. If you have an organization and would like more information about this, feel free to contact us.</p>
+        </div>
+
+        <div class="jumbotron">
+            <h1>Sponsors</h1>
+            {% include "includes/sponsors.html" %}
+        </div>
+    </div>
+
+{% endblock %}
