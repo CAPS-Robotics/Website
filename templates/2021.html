@@ -1,0 +1,69 @@
+{% extends "base/base.html" %}
+
+{% block content %}
+
+	<div class="jumbotron" style="text-align: center;">
+		<h1 style="text-align:center;"><b>Game Design Submission</b></h1>
+		<!-- <h2><a href="http://thebluealliance.com/team/2410">Our Blue Alliance Page</a></h2>
+		<img src="https://i.imgur.com/8n0ceCM.jpg" style="max-width: 45%;"> -->
+
+		<br>
+		<br>
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Official Wild West Wrangle Trailer</b><br></h2>
+			<br>
+			<iframe width="840" height="472.5" src="https://www.youtube.com/embed/SQjUcE01tko" frameborder="0" allowfullscreen></iframe>
+		</div>
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Detailed Field Drawing</b><br></h2>
+			<br>
+			<img src="https://i.imgur.com/l2TJGN6.png" style="max-height:25em;max-width: 100%;">
+		</div>
+
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Wild West Wrangle Game Manual</b><br></h2>
+			<br>
+			<h2 style="padding:0;margin:0"><small><a href="{{ baseUrl() }}/2021_files/WildWestWrangleManual.pdf" target="_blank">Click Here</a> to view the Official Wild West Wrangle Game Manual</small></h2>
+		</div>
+		<br style="clear:both;"/>
+
+	</div>
+
+	<div class="jumbotron" style="text-align: center;">
+		<h1 style="text-align:center;"><b>Innovation Challenge</b></h1>
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Innovation Challenge Prototype App</b><br></h2>
+			<img src="{{ baseUrl() }}/2021_files/Innovation_App.gif"  style="max-height:25em;max-width: 100%;">
+			<br>
+			<h2 style="padding:0;margin:0"><small>Metal Mustang Innovation Challenge media is currently being developed. Check back here in 1-2 weeks for cool pictures, charts, and videos!</small></h2>
+		</div>
+
+	</div>
+
+	<div class="jumbotron">
+		<h1>Results</h1>
+
+		<br>
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Innovation Challenge</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>Rank: N/A</small></h2>
+		</div>
+		<br style="clear:both;"/>
+
+		<div style="text-align: center;">
+			<h2 style="padding:0;margin:0"><b>Innovation Design Challenge</b><br></h2>
+			<h2 style="padding:0;margin:0"><small>Rank: N/A</small></h2>
+		</div>
+		<br style="clear:both;"/>
+	</div>
+
+    <div class="jumbotron">
+        <h1>Sponsors</h1>
+	    {% include "includes/sponsors.html" %}
+    </div>
+
+{% endblock %}
